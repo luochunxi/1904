@@ -1,0 +1,198 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+
+
+{% block css %}
+
+
+    <link rel="stylesheet"
+          href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="shortcut icon"
+          href="/static/images/icon.png">
+
+    <link rel="stylesheet" href="/static/css/remodal.css">
+    <link rel="stylesheet" href="/static/css/remodal-default-theme.css">
+    <link rel="stylesheet" href="/static/css/book-detail.css">
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% block content %}
+
+
+<div class='container'>
+    <div class="row">
+
+
+
+
+    </div>
+
+
+    <div class="row book-container my-detail-row" style="width: 100%">
+        <div class="col-md-2">
+            <img class="book-img" src="{{ a }}{{ content.image }}"/>
+        </div>
+        <div class="col-md-5 flex-vertical detail-con">
+            <div>
+                <h4>{{ content.bname }}</h4>
+            </div>
+            <div class="description-font-margin">
+                <div>
+                    <span>作者:</span>
+                    <span>{{ content.author }}</span>
+                </div>
+                <div>
+                    <span>出版社:</span>
+                    <span>{{ content.publisher }}</span>
+                </div>
+                <div>
+                    <span>出版年：</span>
+                    <span>{{ content.pubdate }}</span>
+                </div>
+                <div>
+                    <span>页数：</span>
+                    <span>{{ content.pages }}</span>
+                </div>
+                <div>
+                    <span>定价：</span>
+                    <span>￥{{ content.price }}</span>
+                </div>
+                <div>
+                    <span>精装：</span>
+                    <span>{{ content.jingz }}</span>
+                </div>
+                <div>
+                    <span>ISBN：</span>
+                    <span id="isbn">{{ content.isbn }}</span>
+                </div>
+
+                    <div class="color-count">
+                        <span>5人想要 / </span>
+                        <span>4人可赠送</span>
+                    </div>
+
+            </div>
+        </div>
+    </div>
+    <div style="margin-top:30px; display: flex" class="row ">
+
+            <div class="col-md-3">
+                <span class="bg-info">已添加至心愿清单</span>
+            </div>
+
+    </div>
+    <div style="margin-top: 30px;" class="row">
+        <div class="col-md-2"><span class="description-title">内容简介</span></div>
+    </div>
+    <div style="margin-top:15px;" class="row">
+        <div class="col-md-11">
+            <p class="description-font">{{ content.intro }}</p>
+        </div>
+    </div>
+
+        <div style="margin-top:30px; display: flex" class="row">
+            <div class="col-md-3"><span class="description-title">向他们请求此书</span></div>
+        </div>
+        <hr style="margin-top:5px;"/>
+
+            <div style="margin-top:30px; display: flex" class="row">
+                <div class="col-md-1" style="width: 11em;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;">
+                    晓啸儿
+                </div>
+                <div class="col-md-2 description-font">
+                    上传于2019-06-17
+                </div>
+                <div class="col-md-2">
+                    <a class="btn-normal"
+                       href="/drift/783">向他请求此书</a>
+                </div>
+            </div>
+
+            <div style="margin-top:30px; display: flex" class="row">
+                <div class="col-md-1" style="width: 11em;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;">
+                    fan1992619
+                </div>
+                <div class="col-md-2 description-font">
+                    上传于2019-06-18
+                </div>
+                <div class="col-md-2">
+                    <a class="btn-normal"
+                       href="/drift/784">向他请求此书</a>
+                </div>
+            </div>
+
+            <div style="margin-top:30px; display: flex" class="row">
+                <div class="col-md-1" style="width: 11em;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;">
+                    jiangzhf
+                </div>
+                <div class="col-md-2 description-font">
+                    上传于2019-06-23
+                </div>
+                <div class="col-md-2">
+                    <a class="btn-normal"
+                       href="/drift/792">向他请求此书</a>
+                </div>
+            </div>
+
+            <div style="margin-top:30px; display: flex" class="row">
+                <div class="col-md-1" style="width: 11em;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;">
+                    hehe
+                </div>
+                <div class="col-md-2 description-font">
+                    上传于2019-06-24
+                </div>
+                <div class="col-md-2">
+                    <a class="btn-normal"
+                       href="/drift/793">向他请求此书</a>
+                </div>
+            </div>
+
+
+
+    <div class="remodal" data-remodal-id="modal" role="dialog"
+         aria-labelledby="modal1Title" aria-describedby="modal1Desc"
+         data-remodal-options="closeOnOutsideClick: false">
+        <button data-remodal-action="close" class="remodal-close"
+                aria-label="Close"></button>
+        <div>
+            <h5 class="diag-title">
+                您确定拥有《遇见未知的自己》这本书吗？</h5>
+            <p id="modal1Desc" class="description-font">
+                如果您不想赠送此书，或者没有这本书，请不要随意发布虚假信息。谢谢你的支持和理解。
+            </p>
+        </div>
+        <br>
+        <button data-remodal-action="confirm" class="remodal-confirm">确定赠送</button>
+        <button data-remodal-action="cancel" class="remodal-cancel">不，算了</button>
+    </div>
+{% endblock %}
+
+
+{% block jss %}
+
+
+    <script src="/static/js/jquery-3.2.1.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/js/base.js"></script>
+    <script>
+        $SCRIPT_ROOT = "";
+    </script>
+
+    <script src="/static/js/remodal.min.js"></script>
+    <script src="/static/js/book-detail.js"></script>
+
+{% endblock %}

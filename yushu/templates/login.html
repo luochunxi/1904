@@ -1,0 +1,123 @@
+{% extends 'base.html' %}
+
+
+{% block css %}
+
+
+
+
+<link rel="stylesheet"
+      href="/static/css/bootstrap.min.css">
+<link rel="stylesheet" href="/static/css/base.css">
+<link rel="shortcut icon"
+      href="/static/images/icon.png">
+
+
+
+
+{% endblock %}
+
+{% block quanbu %}
+
+
+<div class='container'>
+    <div class="row">
+
+        {% if ok not in None %}
+              <div class="alert alert-warning" role="alert">{{ ok }}</div>
+        {% else %}
+            <div> </div>
+        {% endif %}
+    </div>
+
+    <div class="row white-bg-margin">
+        <div class="col-md-6 col-md-offset-3">
+            <div class="row">
+                <div class="col-md-2">
+                    <a onclick="window.history.go(-1)" href="#">返回</a>
+                </div>
+            </div>
+            <div class="bg-container">
+                <div class="row">
+                    <div class="col-md-4 col-md-offset-4 text-center">
+                        <span class="big-title">鱼 书</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2 flex-vertical personal-detail">
+                        <form action="/app/login/" method="post" >
+                            {% if message %}
+                                <div class="alert alert-warning">{{ message }}</div>
+                            {% endif %}
+
+                            {#                            <input style="width:100%" id="email" name="email" type="text"#}
+                            {#                                   placeholder="邮箱"#}
+                            {#                                   class="none-input"#}
+                            {#                                   value="">#}
+                            {#                            <div style="margin-top:3px;" class="password-box">#}
+                            {#                                <input id="password"#}
+                            {#                                       name="password"#}
+                            {#                                       placeholder="密码"#}
+                            {#                                       class="none-input" type="password">#}
+                            {#                                <a id="forget-password" class="description-font"#}
+                            {#                                   href="/reset/password">#}
+                            {#                                    忘记密码?</a>#}
+                            {#                            </div>#}
+                            {% csrf_token %}
+                            <h2 class="text-center">欢迎登录</h2>
+                            <div class="form-group">
+                                {{ login_form.username.label_tag }}
+                                {{ login_form.username }}
+                            </div>
+                            <div class="form-group">
+                                {{ login_form.password.label_tag }}
+                                {{ login_form.password }}
+                            </div>
+
+                            <div class="form-group" id="form1">
+                                {{ login_form.captcha.errors }}
+                                {{ login_form.captcha.label_tag }}
+                                {{ login_form.captcha }}
+                                <a id='aa' href="#">看不清？</a>
+
+                            </div>
+                            <input style="margin-top:15px;" id="btn-submit" type="submit"
+                                   class="btn btn-big btn-block" value="登录">
+                        </form>
+                    </div>
+                </div>
+                <div style="margin-top:30px;" class="row">
+                    <div class="col-md-8 text-center col-md-offset-2">
+                        <span class="description-font">没有账号？</span><a
+                            href="/app/register/">注册</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endblock %}
+<div id="footer" class="flex-hor-center">
+    <span>© 2017-2020 yushu.im created by 七月</span>
+</div>
+{% block jss %}
+
+
+
+
+<script src="/static/js/jquery-3.2.1.min.js"></script>
+<script src="/static/js/bootstrap.min.js"></script>
+<script src="/static/js/base.js"></script>
+<script>
+    $SCRIPT_ROOT = "";
+</script>
+    <script>
+        $('#aa').click(function (ev) {
+            ev.preventDefault();
+            $.post("{% url 'app:send_sms' %}", $('#form1').serialize())
+        })
+    </script>
+
+
+{% endblock %}

@@ -1,0 +1,116 @@
+{% load staticfiles %}
+<!DOCTYPE HTML>
+<html>
+
+
+<title>鱼书</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+{% block css %}
+
+{% endblock css %}
+<body>
+
+{% block quanbu %}
+
+
+<div class="nav-self">
+    <div style="padding-top: inherit" class="container">
+        <form class="form-inline" action="{% url 'app:search' %}" method="get">
+            <div class="flex-vertical-center-height">
+                <div class="col-md-2  col-xs-3 logo">
+                    <img src="/static/images/logo-yushu.png"/>
+                </div>
+                <div style="margin-left:20px;" class="col-md-7  col-xs-6 input-group">
+                    <input name="q" type="text" placeholder="ISBN、图书名称"
+                           class="form-control input-sm">
+                    <span class="input-group-btn">
+                            <input class="btn btn-search" type="submit" value="搜索"/>
+                        </span>
+                </div>
+                <div class="col-md-3 col-xs-3" style="padding-right: 0">
+
+                    {% if request.session.is_login %}
+                        <div class="container-height flex-vertical-center login-box">
+
+                            <a href="{% url 'app:personal' %}">{{ request.session.user_name }}的鱼书</a>
+                            <a class="btn-end" href="{% url 'app:logout' %}">注销</a>
+
+                        </div>
+                    {% else %}
+                        <div class="container-height flex-vertical-center login-box">
+
+                                <div style="height: 100%; width: 100%;display: flex; justify-content: flex-end; align-items: center">
+                                    <a href="{% url 'app:login' %}">登录</a>
+                                    <a class="btn-end" href="{% url 'app:register' %}">注册</a>
+                                </div>
+
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="sub-nav flex-vertical-center">
+    <div class="container" style="width: 100%">
+        <div class="row">
+            <div class="col-md-2 col-xs-3 col-md-offset-2">
+                <a id="recent" href="/app/"
+                   class="flex-vertical-hor-center">
+                    <img src="/static/images/upload.png"/>
+                    <span>最近上传</span>
+                </a>
+            </div>
+            <div class="col-md-2 col-xs-3">
+                <a id="gifts" href="/app/my_gifts"
+                   class="flex-vertical-hor-center">
+                    <img src="/static/images/gift.png"/>
+                    <span>赠送清单</span>
+                </a>
+            </div>
+            <div class="col-md-2 col-xs-3">
+                <a id="wishes" href="/app/my_wish"
+                   class="flex-vertical-hor-center">
+                    <img src="/static/images/wish.png"/>
+                    <span>心愿清单</span>
+                </a>
+            </div>
+            <div class="col-md-2 col-xs-3">
+                <a id="pending" href="/app/pending"
+                   class="flex-vertical-hor-center">
+                    <img src="/static/images/fish.png"/>
+                    <span>鱼漂</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    
+    
+
+    
+{% block content %}
+
+{% endblock %}    
+    
+    
+    
+    
+    
+
+<div id="footer" class="flex-hor-center">
+    <span>© 2017-2020 yushu.im created by 七月</span>
+</div>
+
+{% endblock quanbu %}
+</body>
+
+{% block jss %}
+
+{% endblock jss%}
+
+</html>

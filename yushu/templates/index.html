@@ -1,0 +1,70 @@
+
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block css %}
+
+
+    <link rel="stylesheet"
+          href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="shortcut icon"
+          href="{% static 'images/icon.png' %}">
+
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+{% endblock css %}
+
+{% block content %}
+
+
+    <div class='container'>
+        <div class="row">
+
+
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+            </div>
+        </div>
+        <div id="books" class="row">
+            {% for bb in book %}
+
+                <div class="col-sm-4 book-container">
+                    <a href="{% url 'app:detail' id=bb.id %}" class="link">
+                        {#  < a href="{% url 'book:bookdetail' %}?id={{ book.id }}" class="link">#}
+                        <div class="col-md-4 no-padding">
+                            <img class="book-img cssshadow" src="{{ a }}{{ bb.image }} ">
+                        </div>
+                        <div style="margin-left: 0;" class="col-md-8 flex-vertical book-info">
+                            <span class="title">{{ bb.bname }}</span>
+                            <div class="description-font"><span>作者：</span><span>{{ bb.author }}</span>
+                            </div>
+                            <span class="summary description-font">{{ bb.intro }}</span>
+                        </div>
+                    </a>
+                </div>
+
+            {% endfor %}
+
+
+        </div>
+
+    </div>
+{% endblock  %}
+
+<div id="footer" class="flex-hor-center">
+    <span>© 2017-2020 yushu.im created by 七月</span>
+</div>
+
+
+{% block jss %}
+
+<script src="/static/js/jquery-3.2.1.min.js"></script>
+<script src="/static/js/bootstrap.min.js"></script>
+<script src="/static/js/base.js"></script>
+<script>
+    $SCRIPT_ROOT = "";
+</script>
+
+{% endblock jss %}

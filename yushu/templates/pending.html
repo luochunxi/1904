@@ -1,0 +1,178 @@
+
+<!DOCTYPE HTML>
+<html>
+
+
+    <title>鱼书</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+
+    <link rel="stylesheet"
+          href="/static/3rd/ui/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/base.css">
+    <link rel="shortcut icon"
+          href="/static/images/icon.png">
+
+  <link rel="stylesheet" href="/static/css/pending.css">
+
+
+<body>
+
+    <div class="nav-self">
+        <div style="padding-top: inherit" class="container">
+            <form class="form-inline" action="/book/search" method="get">
+                <div class="flex-vertical-center-height">
+                    <div class="col-md-2  col-xs-3 logo">
+                        <img src="/static/images/logo-yushu.png"/>
+                    </div>
+                    <div style="margin-left:20px;" class="col-md-7  col-xs-6 input-group">
+                        <input name="q" type="text" placeholder="ISBN、图书名称"
+                               class="form-control input-sm">
+                        <span class="input-group-btn">
+                            <input class="btn btn-search" type="submit" value="搜索"/>
+                        </span>
+                    </div>
+                    <div class="col-md-3 col-xs-3" style="padding-right: 0">
+
+
+
+
+                        <div class="container-height flex-vertical-center login-box">
+
+                                <a href="/personal">嘻嘻的鱼书</a>
+                                <a class="btn-end" href="/logout">注销</a>
+
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="sub-nav flex-vertical-center">
+        <div class="container" style="width: 100%">
+            <div class="row">
+                <div class="col-md-2 col-xs-3 col-md-offset-2">
+                    <a id="recent" href="/"
+                       class="flex-vertical-hor-center">
+                        <img src="/static/images/upload.png"/>
+                        <span>最近上传</span>
+                    </a>
+                </div>
+                <div class="col-md-2 col-xs-3">
+                    <a id="gifts" href="/my/gifts"
+                       class="flex-vertical-hor-center">
+                        <img src="/static/images/gift.png"/>
+                        <span>赠送清单</span>
+                    </a>
+                </div>
+                <div class="col-md-2 col-xs-3">
+                    <a id="wishes" href="/my/wish"
+                       class="flex-vertical-hor-center">
+                        <img src="/static/images/wish.png"/>
+                        <span>心愿清单</span>
+                    </a>
+                </div>
+                <div class="col-md-2 col-xs-3">
+                    <a id="pending" href="/pending"
+                       class="flex-vertical-hor-center">
+                        <img src="/static/images/fish.png"/>
+                        <span>鱼漂</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class='container'>
+    <div class="row">
+
+
+
+
+    </div>
+
+    <div class="row module-title">
+        <div style="margin-top:30px;" class="col-md-2">
+            <span class='sub-title'>交易记录</span>
+        </div>
+    </div>
+
+        <div style="margin-top:20px;" class="row drift-container">
+            <div class="col-md-12  col-xs-12">
+                <div class="row my-pending-row">
+                    <div class="col-md-2 col-xs-3 le-col">
+                        <img class="book-img-small shadow" src="https://img3.doubanio.com/lpic/s3403254.jpg">
+                    </div>
+                    <div
+                         class="col-md-8 col-xs-7 flex-vertical description">
+                        <div><span>书籍名：</span><span>遇见未知的自己</span></div>
+                        <div><span>作者：</span><span>张德芬</span></div>
+                        <div><span>发起日期：</span><span>2019-06-25</span></div>
+                        <div>
+
+                                <span>向他请求：</span>
+
+                            <span>晓啸儿</span>
+                        </div>
+                        <div><span>状态：</span><span
+                                class="status-color">等待对方邮寄</span></div>
+                        <div><span>邮寄地址：</span><span
+                                class="space">xixi</span><span>六神磊磊绿绿所绿哒哒哒哒哒哒多多多</span>
+                        </div>
+                        <div><span>联系电话：</span><span>13845678941</span></div>
+                    </div>
+                    <div class="col-md-2 col-xs-2 flex-vertical ri-col">
+
+
+
+                                <a href="/drift/94/redraw">
+                                        <span class="btn-normal">撤 销</span>
+                                </a>
+
+
+                    </div>
+                </div>
+                <div style="margin-top:20px;" class="row message-container">
+                    <div class="col-md-12">
+
+
+
+                        <p><span
+                                class="message-flag">你的留言：</span>
+                            <span>哒哒哒哒哒哒多多多多多多</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+</div>
+<div id="footer" class="flex-hor-center">
+    <span>© 2017-2020 yushu.im created by 七月</span>
+</div>
+</body>
+
+
+    <script src="/static/3rd/jquery-3.2.1.min.js"></script>
+    <script src="/static/3rd/bootstrap.min.js"></script>
+    <script src="/static/js/base.js"></script>
+    <script>
+        $SCRIPT_ROOT = "";
+    </script>
+
+
+</html>

@@ -1,0 +1,168 @@
+
+<!DOCTYPE HTML>
+<html>
+
+
+    <title>鱼书</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+
+    <link rel="stylesheet"
+          href="/static/3rd/ui/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/base.css">
+    <link rel="shortcut icon"
+          href="/static/images/icon.png">
+
+
+
+<body>
+
+    <div class="nav-self">
+        <div style="padding-top: inherit" class="container">
+            <form class="form-inline" action="/book/search" method="get">
+                <div class="flex-vertical-center-height">
+                    <div class="col-md-2  col-xs-3 logo">
+                        <img src="/static/images/logo-yushu.png"/>
+                    </div>
+                    <div style="margin-left:20px;" class="col-md-7  col-xs-6 input-group">
+                        <input name="q" type="text" placeholder="ISBN、图书名称"
+                               class="form-control input-sm">
+                        <span class="input-group-btn">
+                            <input class="btn btn-search" type="submit" value="搜索"/>
+                        </span>
+                    </div>
+                    <div class="col-md-3 col-xs-3" style="padding-right: 0">
+
+
+
+
+                        <div class="container-height flex-vertical-center login-box">
+
+                                <a href="/personal">嘻嘻的鱼书</a>
+                                <a class="btn-end" href="/logout">注销</a>
+
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="sub-nav flex-vertical-center">
+        <div class="container" style="width: 100%">
+            <div class="row">
+                <div class="col-md-2 col-xs-3 col-md-offset-2">
+                    <a id="recent" href="/"
+                       class="flex-vertical-hor-center">
+                        <img src="/static/images/upload.png"/>
+                        <span>最近上传</span>
+                    </a>
+                </div>
+                <div class="col-md-2 col-xs-3">
+                    <a id="gifts" href="/my/gifts"
+                       class="flex-vertical-hor-center">
+                        <img src="/static/images/gift.png"/>
+                        <span>赠送清单</span>
+                    </a>
+                </div>
+                <div class="col-md-2 col-xs-3">
+                    <a id="wishes" href="/my/wish"
+                       class="flex-vertical-hor-center">
+                        <img src="/static/images/wish.png"/>
+                        <span>心愿清单</span>
+                    </a>
+                </div>
+                <div class="col-md-2 col-xs-3">
+                    <a id="pending" href="/pending"
+                       class="flex-vertical-hor-center">
+                        <img src="/static/images/fish.png"/>
+                        <span>鱼漂</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class='container'>
+    <div class="row">
+
+
+
+
+    </div>
+
+
+    <div class="row flex-vertical-center">
+        <div style="margin-top:20px;" class="col-md-6">
+            <span class="sub-title">我想要的书籍  共  1 本</span>
+            <hr>
+        </div>
+    </div>
+
+        <div class="row my-gifts-row">
+            <a href="/book/9787508044019/detail" class="">
+                <div style="margin-bottom:30px; display: flex" class="col-md-9 col-padding content-box">
+                    <div style="display: flex; justify-content: flex-start; flex-grow: 1">
+                        <div class="col-md-2 img-box">
+                            <img class="book-img-small shadow" src="https://img3.doubanio.com/lpic/s3403254.jpg">
+                        </div>
+                        <div style="margin-top:6px;" class="col-md-6 flex-vertical">
+                            <span id="title"
+                                  class="book-middle-title">遇见未知的自己</span>
+                            <div style="margin-top:6px;"
+                                 class="flex-vertical description-font">
+                                <span id="author">张德芬</span>
+                                <span id="publisher">华夏出版社</span>
+                                <span id="price">￥29.00</span>
+                                <span id="isbn">9787508044019</span>
+                            </div>
+                            <a class="link-normal"
+                               href="/wish/book/9787508044019/redraw">
+                                撤销
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 flex-vertical" style="padding: 0">
+
+                            <a href="/book/9787508044019/detail">
+                                <span class="bg-info">4人赠送</span>
+                            </a>
+
+                    </div>
+                </div>
+            </a>
+        </div>
+
+
+
+</div>
+<div id="footer" class="flex-hor-center">
+    <span>© 2017-2020 yushu.im created by 七月</span>
+</div>
+</body>
+
+
+
+    <script src="/static/3rd/jquery-3.2.1.min.js"></script>
+    <script src="/static/3rd/bootstrap.min.js"></script>
+    <script src="/static/js/base.js"></script>
+    <script>
+        $SCRIPT_ROOT = "";
+    </script>
+
+    <script src="/static/js/util.js"></script>
+
+
+</html>
