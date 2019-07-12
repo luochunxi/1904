@@ -41,8 +41,47 @@
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="yushu" />
+  </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/base.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="266">
+              <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
+              <folding>
+                <element signature="n#style#0;n#div#2;n#div#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="e#1526#1532#0#HTML" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="das://4b06e71e-f090-492a-89bb-4d213e68c804/schema/yushu/table/book">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state projectRestartId="c1e0e8e1-803e-454a-b7df-68b7c4e2ae3a">
+              <filtering>
+                <filter text="" />
+              </filtering>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="das://4b06e71e-f090-492a-89bb-4d213e68c804/schema/yushu/table/user">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state projectRestartId="c1e0e8e1-803e-454a-b7df-68b7c4e2ae3a">
+              <filtering>
+                <filter text="" />
+              </filtering>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -57,62 +96,101 @@
       <find>en</find>
       <find>e</find>
       <find>enco</find>
+      <find>uid_id</find>
+      <find>static</find>
+      <find>endblock</find>
+      <find>quanbu</find>
+      <find>lau</find>
+      <find>orde</find>
+      <find>order</find>
+      <find>captcha</find>
+      <find>.heart</find>
+      <find>hash_code</find>
+      <find>adminUser</find>
+      <find>'admin_del'</find>
+      <find>admin_del</find>
+      <find>admin_book</find>
+      <find>'admin:admin_book'</find>
     </findStrings>
+    <replaceStrings>
+      <replace>book_del</replace>
+      <replace>'admin:admin_del'</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="PREVIEW_PUSH_ON_COMMIT_AND_PUSH" value="false" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/templates/pending.html" />
-        <option value="$PROJECT_DIR$/templates/wish.html" />
-        <option value="$PROJECT_DIR$/templates/gifts.html" />
-        <option value="$PROJECT_DIR$/templates/dirft.html" />
-        <option value="$PROJECT_DIR$/yushu/__init__.py" />
-        <option value="$PROJECT_DIR$/App/forms.py" />
-        <option value="$PROJECT_DIR$/App/urls.py" />
-        <option value="$PROJECT_DIR$/App/__init__.py" />
-        <option value="$USER_HOME$/Envs/1902django/Lib/site-packages/django/db/backends/mysql/base.py" />
-        <option value="$USER_HOME$/Envs/1902django/Lib/site-packages/django/db/backends/mysql/operations.py" />
-        <option value="$PROJECT_DIR$/App/models.py" />
         <option value="$PROJECT_DIR$/App/views.py" />
         <option value="$PROJECT_DIR$/App/apps.py" />
         <option value="$PROJECT_DIR$/User/apps.py" />
-        <option value="$PROJECT_DIR$/User/forms.py" />
-        <option value="$PROJECT_DIR$/xixi.py" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
         <option value="$PROJECT_DIR$/templates/password.py" />
-        <option value="$PROJECT_DIR$/templates/detail.html" />
-        <option value="$PROJECT_DIR$/templates/register.html" />
         <option value="$PROJECT_DIR$/templates/book.html" />
         <option value="$PROJECT_DIR$/static/js/jquery.twbsPagination.min.js" />
-        <option value="$PROJECT_DIR$/yushu/settings.py" />
         <option value="$PROJECT_DIR$/User/send_emails.py" />
-        <option value="$PROJECT_DIR$/templates/personal.html" />
-        <option value="$PROJECT_DIR$/templates/index.html" />
-        <option value="$PROJECT_DIR$/templates/password.html" />
-        <option value="$PROJECT_DIR$/User/send_code.py" />
-        <option value="$PROJECT_DIR$/templates/login.html" />
-        <option value="$PROJECT_DIR$/yushu/urls.py" />
-        <option value="$PROJECT_DIR$/templates/search.html" />
-        <option value="$PROJECT_DIR$/templates/base.html" />
-        <option value="$PROJECT_DIR$/User/models.py" />
         <option value="$PROJECT_DIR$/User/__init__.py" />
-        <option value="$PROJECT_DIR$/User/views.py" />
+        <option value="$PROJECT_DIR$/User/upload_files.py" />
+        <option value="$PROJECT_DIR$/User/pagings.py" />
+        <option value="$PROJECT_DIR$/templates/password.html" />
+        <option value="$PROJECT_DIR$/xixi.py" />
+        <option value="$PROJECT_DIR$/templates/personal.html" />
+        <option value="$PROJECT_DIR$/templates/nodrift.html" />
+        <option value="$PROJECT_DIR$/User/send_code.py" />
+        <option value="$PROJECT_DIR$/User/forms.py" />
+        <option value="$PROJECT_DIR$/templates/register.html" />
+        <option value="$PROJECT_DIR$/templates/login.html" />
+        <option value="$PROJECT_DIR$/User/templatetags/fetchs.py" />
+        <option value="$PROJECT_DIR$/templates/gifts.html" />
+        <option value="$PROJECT_DIR$/templates/wish.html" />
+        <option value="$PROJECT_DIR$/templates/detail.html" />
+        <option value="$PROJECT_DIR$/alipay_key/public_key_2048.txt" />
+        <option value="$PROJECT_DIR$/alipay_key/private_key_2048.txt" />
+        <option value="$PROJECT_DIR$/utils/pay.py" />
+        <option value="$PROJECT_DIR$/static/js/aixin.js" />
+        <option value="$PROJECT_DIR$/test.py" />
+        <option value="$PROJECT_DIR$/templates/dirft.html" />
         <option value="$PROJECT_DIR$/User/urls.py" />
+        <option value="$PROJECT_DIR$/templates/search.html" />
+        <option value="$PROJECT_DIR$/templates/pending.html" />
+        <option value="$PROJECT_DIR$/templates/head_photo.html" />
+        <option value="$PROJECT_DIR$/templates/index.html" />
+        <option value="$PROJECT_DIR$/admin/forms.py" />
+        <option value="$PROJECT_DIR$/admin/views.py" />
+        <option value="$PROJECT_DIR$/admin/urls.py" />
+        <option value="$PROJECT_DIR$/Admin/apps.py" />
+        <option value="$PROJECT_DIR$/yushu/urls.py" />
+        <option value="$PROJECT_DIR$/yushu/settings.py" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
+        <option value="$PROJECT_DIR$/User/views.py" />
+        <option value="$PROJECT_DIR$/templates/admin/hmd.html" />
+        <option value="$PROJECT_DIR$/User/models.py" />
+        <option value="$PROJECT_DIR$/templates/admin/admin_user.html" />
+        <option value="$PROJECT_DIR$/templates/admin/admin_del.html" />
+        <option value="$PROJECT_DIR$/templates/admin/admin_book.html" />
+        <option value="$PROJECT_DIR$/templates/admin/admin_gift.html" />
+        <option value="$PROJECT_DIR$/Admin/urls.py" />
+        <option value="$PROJECT_DIR$/templates/admin/index.html" />
+        <option value="$PROJECT_DIR$/Admin/views.py" />
+        <option value="$PROJECT_DIR$/templates/base.html" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="543" />
-    <option name="y" value="11" />
-    <option name="width" value="1355" />
-    <option name="height" value="1025" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="2" />
+    <option name="y" value="35" />
+    <option name="width" value="1625" />
+    <option name="height" value="1009" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -130,20 +208,17 @@
               <item name="yushu" type="462c0819:PsiDirectoryNode" />
               <item name="User" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="yushu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yushu" type="462c0819:PsiDirectoryNode" />
-              <item name="yushu" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -152,7 +227,15 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\xixi\PycharmProjects\1904\yushu" />
+      <recent name="C:\Users\xixi\PycharmProjects\1904\yushu\static" />
+      <recent name="C:\Users\xixi\PycharmProjects\1904\yushu\static\upload\head_photo" />
+      <recent name="C:\Users\xixi\PycharmProjects\1904\yushu\User" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -166,8 +249,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.urls">
-    <configuration name="forms" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.test">
+    <configuration name="fetchs" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="yushu" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -175,12 +258,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/User" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/User/templatetags" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/User/forms.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/User/templatetags/fetchs.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -189,7 +272,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="urls" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="settings" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="yushu" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -197,12 +280,34 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/User" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/yushu" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/User/urls.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/yushu/settings.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="yushu" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -280,10 +385,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.urls" />
-        <item itemvalue="Python.views" />
+        <item itemvalue="Python.test" />
+        <item itemvalue="Python.settings" />
+        <item itemvalue="Python.fetchs" />
         <item itemvalue="Python.xixi" />
-        <item itemvalue="Python.forms" />
+        <item itemvalue="Python.views" />
       </list>
     </recent_temporary>
   </component>
@@ -314,387 +420,467 @@
       <workItem from="1561874960071" duration="4785000" />
       <workItem from="1561942965320" duration="977000" />
       <workItem from="1561970432657" duration="1191000" />
+      <workItem from="1561978157340" duration="18172000" />
+      <workItem from="1562028887325" duration="24197000" />
+      <workItem from="1562134305083" duration="78000" />
+      <workItem from="1562137574502" duration="24094000" />
+      <workItem from="1562208046543" duration="34000" />
+      <workItem from="1562227942584" duration="16459000" />
+      <workItem from="1562248816359" duration="488000" />
+      <workItem from="1562250523970" duration="284000" />
+      <workItem from="1562288523178" duration="2038000" />
+      <workItem from="1562291266755" duration="3659000" />
+      <workItem from="1562297573062" duration="2548000" />
+      <workItem from="1562311976779" duration="9981000" />
+      <workItem from="1562324932876" duration="1188000" />
+      <workItem from="1562327742389" duration="8985000" />
+      <workItem from="1562375613882" duration="10619000" />
+      <workItem from="1562394508116" duration="12912000" />
+      <workItem from="1562415527127" duration="5249000" />
+      <workItem from="1562496412757" duration="4887000" />
+      <workItem from="1562549567811" duration="12000" />
+      <workItem from="1562567917966" duration="22670000" />
+      <workItem from="1562652961309" duration="24151000" />
+      <workItem from="1562727417287" duration="3256000" />
+      <workItem from="1562743710395" duration="17613000" />
+      <workItem from="1562812992053" duration="20549000" />
+      <workItem from="1562838168176" duration="8594000" />
+      <workItem from="1562852792364" duration="1217000" />
+      <workItem from="1562854030312" duration="740000" />
+      <workItem from="1562854809032" duration="2138000" />
+      <workItem from="1562893244064" duration="6818000" />
+      <workItem from="1562902331163" duration="4556000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="115189000" />
+    <option name="totallyTimeSpent" value="373375000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
+    <frame x="20" y="86" width="1300" height="807" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15147454" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49926794" visible="true" weight="0.16425121" />
+      <window_info id="Favorites" order="1" sideWeight="0.50073206" side_tool="true" weight="0.20214844" />
+      <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32946298" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32789317" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.39235127" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3997093" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32994187" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.37734583" side_tool="true" weight="0.23903818" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.62265414" visible="true" weight="0.42574257" />
-      <window_info anchor="bottom" id="Python Console" order="12" weight="0.2659123" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.2643819" side_tool="true" weight="0.25892857" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.7356181" visible="true" weight="0.20296296" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.2645349" />
       <window_info anchor="bottom" id="Database Console" order="13" weight="0.15983027" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" />
-      <window_info anchor="right" id="Database" order="4" visible="true" weight="0.21648793" />
+      <window_info active="true" anchor="right" id="Database" order="4" visible="true" weight="0.32447666" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21694036" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49926794" visible="true" weight="0.23188406" />
+      <window_info id="Favorites" order="1" sideWeight="0.50073206" side_tool="true" weight="0.20214844" />
+      <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32956153" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32803467" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.39235127" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3997093" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32994187" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5022173" side_tool="true" weight="0.23965763" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4977827" visible="true" weight="0.16885008" />
-      <window_info anchor="bottom" id="Python Console" order="12" weight="0.2659123" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.2643819" side_tool="true" weight="0.25892857" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.7356181" visible="true" weight="0.09970238" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.2645349" />
       <window_info anchor="bottom" id="Database Console" order="13" weight="0.15983027" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" />
-      <window_info anchor="right" id="Database" order="4" weight="0.22817631" />
+      <window_info anchor="right" id="Database" order="4" weight="0.32447666" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/yushu$views.coverage" NAME="views Coverage Results" MODIFIED="1561943080578" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/User" />
-    <SUITE FILE_PATH="coverage/yushu$xixi.coverage" NAME="xixi Coverage Results" MODIFIED="1561551277201" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/yushu$views.coverage" NAME="views Coverage Results" MODIFIED="1562323051575" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/User" />
+    <SUITE FILE_PATH="coverage/yushu$upload_files.coverage" NAME="upload_files Coverage Results" MODIFIED="1562170985083" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/User" />
+    <SUITE FILE_PATH="coverage/yushu$xixi.coverage" NAME="xixi Coverage Results" MODIFIED="1562324010081" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/yushu$settings.coverage" NAME="settings Coverage Results" MODIFIED="1562738820733" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/yushu" />
     <SUITE FILE_PATH="coverage/yushu$forms.coverage" NAME="forms Coverage Results" MODIFIED="1561551056188" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/User" />
+    <SUITE FILE_PATH="coverage/yushu$fetchs.coverage" NAME="fetchs Coverage Results" MODIFIED="1562663229367" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/User/templatetags" />
     <SUITE FILE_PATH="coverage/yushu$urls.coverage" NAME="urls Coverage Results" MODIFIED="1561943140306" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/User" />
+    <SUITE FILE_PATH="coverage/yushu$test.coverage" NAME="test Coverage Results" MODIFIED="1562769155719" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/static/upload/s1890264.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/upload/s2738366.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/upload/s3046564.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/upload/s3078482.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/upload/s3403254.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/upload/s3479802.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/upload/s3628415.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/upload/s3922462.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/upload/s3949449.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/upload/s4442295.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/upload/s23836852.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/upload/s26012674.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/upload/s26689304.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/images/gift.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/7b4f6889-7c18-437c-8cdf-d48b6ee4819c/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/dirft.html">
+    <entry file="file://$PROJECT_DIR$/templates/wish.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1083" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/yushu.sql" />
-    <entry file="file://$PROJECT_DIR$/User/admin.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/register.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="548">
-          <caret line="117" column="14" selection-start-line="117" selection-start-column="14" selection-end-line="117" selection-end-column="14" />
+        <state relative-caret-position="76">
+          <caret line="61" column="32" lean-forward="true" selection-start-line="61" selection-start-column="32" selection-end-line="61" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/book.html" />
-    <entry file="file://$PROJECT_DIR$/static/js/jquery.twbsPagination.min.js">
+    <entry file="file://$PROJECT_DIR$/User/templatetags/fetchs.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="95">
+          <caret line="5" column="19" lean-forward="true" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/alipay_key/private_key_2048.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="15" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/alipay_key/public_key_2048.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/gpt.js" />
+    <entry file="file://$PROJECT_DIR$/static/js/aixin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="49" column="3" lean-forward="true" selection-start-line="49" selection-start-column="3" selection-end-line="49" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="566">
+          <caret line="149" column="19" lean-forward="true" selection-start-line="149" selection-start-column="19" selection-end-line="149" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Envs/1902django/Lib/site-packages/alipay/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-209">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#78#89#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/search_result.js">
+    <entry file="file://$PROJECT_DIR$/templates/dirft.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="38" lean-forward="true" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
+        <state relative-caret-position="690">
+          <caret line="116" selection-start-line="116" selection-end-line="116" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#form#0;n#div#1;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#0;n#div#1;n#form#0;n#div#1;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#1;n#form#0;n#div#1;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/detail.html">
+    <entry file="file://$USER_HOME$/Envs/1902django/Lib/site-packages/django/db/models/query.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3401">
-          <caret line="179" column="81" lean-forward="true" selection-start-line="179" selection-start-column="81" selection-end-line="179" selection-end-column="81" />
+        <state relative-caret-position="120">
+          <caret line="908" column="41" lean-forward="true" selection-start-line="908" selection-start-column="41" selection-end-line="908" selection-end-column="41" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Envs/1902django/Lib/site-packages/django/core/handlers/exception.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-187">
-          <caret line="34" selection-start-line="34" selection-end-line="34" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/User/tests.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/personal.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-257">
-          <caret line="40" column="14" selection-start-line="40" selection-start-column="14" selection-end-line="40" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/search.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="727">
-          <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://75d62ec7-dbd1-4281-b759-313977d78495/schema/yushu/table/captcha_captchastore">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="ee45d589-1c22-473d-b4a6-c305120b3ac8">
-          <filtering>
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/yushu/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2603">
-          <caret line="137" column="18" selection-start-line="137" selection-start-column="18" selection-end-line="137" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/password.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1463">
-          <caret line="77" selection-start-line="77" selection-end-line="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://75d62ec7-dbd1-4281-b759-313977d78495/schema/yushu/table/auth_user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="f257b13e-8684-49d5-86bc-b1293f2a3c24">
-          <filtering>
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://75d62ec7-dbd1-4281-b759-313977d78495/schema/yushu/table/auth_user_groups">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="f257b13e-8684-49d5-86bc-b1293f2a3c24">
-          <filtering>
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/User/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="30" lean-forward="true" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://75d62ec7-dbd1-4281-b759-313977d78495/schema/yushu/table/auth_user_user_permissions">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="f257b13e-8684-49d5-86bc-b1293f2a3c24">
-          <filtering>
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://75d62ec7-dbd1-4281-b759-313977d78495/schema/yushu/table/django_migrations">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="f257b13e-8684-49d5-86bc-b1293f2a3c24">
-          <filtering>
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://75d62ec7-dbd1-4281-b759-313977d78495/schema/yushu/table/django_session">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="f257b13e-8684-49d5-86bc-b1293f2a3c24">
-          <filtering>
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://75d62ec7-dbd1-4281-b759-313977d78495/schema/yushu/table/auth_permission">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="f257b13e-8684-49d5-86bc-b1293f2a3c24">
-          <filtering>
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://75d62ec7-dbd1-4281-b759-313977d78495/schema/yushu/table/auth_group_permissions">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="f257b13e-8684-49d5-86bc-b1293f2a3c24">
-          <filtering>
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://75d62ec7-dbd1-4281-b759-313977d78495/schema/yushu/table/auth_group">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="f257b13e-8684-49d5-86bc-b1293f2a3c24">
-          <filtering>
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://75d62ec7-dbd1-4281-b759-313977d78495/schema/yushu/table/django_content_type">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="f257b13e-8684-49d5-86bc-b1293f2a3c24">
-          <filtering>
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/User/admin.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/User/forms.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="27" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="27" />
+        <state relative-caret-position="76">
+          <caret line="4" column="9" lean-forward="true" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
           <folding>
             <element signature="e#0#24#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/yushu/urls.py">
+    <entry file="file://$PROJECT_DIR$/templates/pending.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
-          <folding>
-            <element signature="e#629#661#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="150">
+          <caret line="110" column="36" lean-forward="true" selection-start-line="110" selection-start-column="36" selection-end-line="110" selection-end-column="36" />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/head_photo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="31" column="42" lean-forward="true" selection-start-line="31" selection-start-column="42" selection-end-line="31" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/forms.py" />
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/search.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1311">
+          <caret line="69" column="44" selection-start-line="69" selection-start-column="44" selection-end-line="69" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/pay.py" />
+    <entry file="file://$PROJECT_DIR$/templates/admin/add_book.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-53" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/admin/logout.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/admin/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-27" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/User/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="54" lean-forward="true" selection-start-line="8" selection-start-column="54" selection-end-line="8" selection-end-column="54" />
+        <state relative-caret-position="190">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/login.html">
+    <entry file="file://$PROJECT_DIR$/Admin/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Admin/admin.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Admin/apps.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2147">
-          <caret line="113" column="9" selection-start-line="113" selection-start-column="9" selection-end-line="113" selection-end-column="9" />
+        <state relative-caret-position="38">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/User/views.py">
+    <entry file="file://$PROJECT_DIR$/yushu/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4408">
-          <caret line="232" selection-start-line="232" selection-end-line="232" />
+        <state relative-caret-position="122">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
           <folding>
-            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#629#661#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Admin/models.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Admin/tests.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yushu/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="608">
+          <caret line="32" column="26" selection-start-line="32" selection-start-column="26" selection-end-line="32" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/manage.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1501">
-          <caret line="79" column="47" selection-start-line="79" selection-start-column="43" selection-end-line="79" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/User/send_code.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
+        <state relative-caret-position="76">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
           <folding>
-            <element signature="e#6#32#0" expanded="true" />
+            <element signature="e#84#93#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Envs/1902django/Lib/site-packages/django/core/handlers/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="125" selection-start-line="125" selection-end-line="125" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/admin/hmd.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="43" column="70" lean-forward="true" selection-start-line="43" selection-start-column="70" selection-end-line="43" selection-end-column="70" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/User/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="31" column="67" lean-forward="true" selection-start-line="31" selection-start-column="67" selection-end-line="31" selection-end-column="67" />
+        <state relative-caret-position="-1424">
+          <caret line="21" column="45" selection-start-line="21" selection-start-column="45" selection-end-line="21" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="das://75d62ec7-dbd1-4281-b759-313977d78495/schema/yushu/table/user">
+    <entry file="file://$PROJECT_DIR$/templates/admin/admin_del.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="68" column="67" selection-start-line="68" selection-start-column="56" selection-end-line="68" selection-end-column="67" />
+          <folding>
+            <element signature="e#1366#1392#0#HTML" expanded="true" />
+            <element signature="e#1968#1993#0#HTML" expanded="true" />
+            <element signature="e#2491#2510#0#HTML" expanded="true" />
+            <element signature="e#3532#3538#0#HTML" expanded="true" />
+            <element signature="e#4156#4163#1#HTML" expanded="true" />
+            <element signature="e#4479#4486#1#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/admin/admin_book.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="110" column="30" lean-forward="true" selection-end-line="114" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/admin/admin_gift.html" />
+    <entry file="file://$PROJECT_DIR$/Admin/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="18" column="68" selection-start-line="18" selection-start-column="68" selection-end-line="18" selection-end-column="68" />
+          <folding>
+            <element signature="e#0#46#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/admin/admin_user.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="44" selection-start-line="9" selection-start-column="44" selection-end-line="9" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xixi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="27" lean-forward="true" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/admin/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="30" selection-start-line="30" selection-end-line="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Admin/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="144" lean-forward="true" selection-start-line="144" selection-end-line="144" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://4b06e71e-f090-492a-89bb-4d213e68c804/schema/yushu/table/pending">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="0b464813-5e25-48e7-bf17-43e886e102db">
+        <state projectRestartId="c1e0e8e1-803e-454a-b7df-68b7c4e2ae3a">
           <filtering>
             <filter text="" />
           </filtering>
         </state>
       </provider>
     </entry>
-    <entry file="das://75d62ec7-dbd1-4281-b759-313977d78495/schema/yushu/table/book">
+    <entry file="das://4b06e71e-f090-492a-89bb-4d213e68c804/schema/yushu/table/wish">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="0b464813-5e25-48e7-bf17-43e886e102db">
+        <state projectRestartId="c1e0e8e1-803e-454a-b7df-68b7c4e2ae3a">
+          <filtering>
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://4b06e71e-f090-492a-89bb-4d213e68c804/schema/yushu/table/gifts">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="c1e0e8e1-803e-454a-b7df-68b7c4e2ae3a">
+          <filtering>
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="121" column="26" lean-forward="true" selection-start-line="121" selection-start-column="26" selection-end-line="121" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/User/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="66" column="9" selection-start-line="66" selection-start-column="4" selection-end-line="66" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
+          <folding>
+            <element signature="n#style#0;n#div#2;n#div#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#1526#1532#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://4b06e71e-f090-492a-89bb-4d213e68c804/schema/yushu/table/book">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="c1e0e8e1-803e-454a-b7df-68b7c4e2ae3a">
+          <filtering>
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://4b06e71e-f090-492a-89bb-4d213e68c804/schema/yushu/table/user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="c1e0e8e1-803e-454a-b7df-68b7c4e2ae3a">
           <filtering>
             <filter text="" />
           </filtering>

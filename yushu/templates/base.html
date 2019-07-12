@@ -1,4 +1,6 @@
-{% load staticfiles %}
+
+
+{% load static %}
 <!DOCTYPE HTML>
 <html>
 
@@ -17,6 +19,7 @@
 <div class="nav-self">
     <div style="padding-top: inherit" class="container">
         <form class="form-inline" action="{% url 'app:search' %}" method="get">
+{#        {% csrf_token %}#}
             <div class="flex-vertical-center-height">
                 <div class="col-md-2  col-xs-3 logo">
                     <img src="/static/images/logo-yushu.png"/>
@@ -28,12 +31,15 @@
                             <input class="btn btn-search" type="submit" value="搜索"/>
                         </span>
                 </div>
-                <div class="col-md-3 col-xs-3" style="padding-right: 0">
+                <div class="col-md-3 col-xs-3" style="padding-right: 0;width: 600px">
 
-                    {% if request.session.is_login %}
-                        <div class="container-height flex-vertical-center login-box">
-
-                            <a href="{% url 'app:personal' %}">{{ request.session.user_name }}的鱼书</a>
+                    {% if request.session.is_login %}   
+                        <div class="container-height flex-vertical-center login-box" >
+                            <a href="{% url 'app:head_photo' %}"><img src="/static/{{ request.session.head_photo }}" title="头像" width="60px" style="border: 1px solid black;padding: 0px;margin: 0px"></a>
+                            <a href="{% url 'app:personal' %}" >{{ request.session.user_name }}的鱼书</a> &emsp;
+                            {% if user.usertype == 0 %}
+                                <a href="{% url 'admin:index' %}" >管理员</a>
+                            {% endif %}
                             <a class="btn-end" href="{% url 'app:logout' %}">注销</a>
 
                         </div>
@@ -63,21 +69,21 @@
                 </a>
             </div>
             <div class="col-md-2 col-xs-3">
-                <a id="gifts" href="/app/my_gifts"
+                <a id="gifts" href="/app/gifts_list"
                    class="flex-vertical-hor-center">
                     <img src="/static/images/gift.png"/>
                     <span>赠送清单</span>
                 </a>
             </div>
             <div class="col-md-2 col-xs-3">
-                <a id="wishes" href="/app/my_wish"
+                <a id="wishes" href="/app/wish_list"
                    class="flex-vertical-hor-center">
                     <img src="/static/images/wish.png"/>
                     <span>心愿清单</span>
                 </a>
             </div>
             <div class="col-md-2 col-xs-3">
-                <a id="pending" href="/app/pending"
+                <a id="pending" href="/app/pending_list"
                    class="flex-vertical-hor-center">
                     <img src="/static/images/fish.png"/>
                     <span>鱼漂</span>
@@ -108,7 +114,7 @@
 
 {% endblock quanbu %}
 </body>
-
+<script src="/static/js/aixin.js"></script>
 {% block jss %}
 
 {% endblock jss%}

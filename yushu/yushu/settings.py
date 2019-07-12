@@ -36,6 +36,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'User.apps.UserConfig',
+    # 'Admin'
+    'User.templatetags',
     'captcha',
 ]
 
@@ -126,8 +128,11 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),]
 
 # 上传文件
 MEDIA_URL = '/static/upload/'
-MEDIA_ROOT = [os.path.join(BASE_DIR,'static/upload')]
+MEDIA_ROOT = os.path.join(BASE_DIR,'static/upload/head_photo/')
 
+
+# 分页
+NUMOFPAGE = 4
 
 # 发邮件
 EMAIL_USE_TLS = True   #是否使用TLS安全传输协议(用于在两个通信应用程序之间提供保密性和数据完整性。)
@@ -136,3 +141,17 @@ EMAIL_HOST = 'smtp.163.com'   #发送邮件的邮箱 的 SMTP服务器，这里�
 EMAIL_PORT = 25     #发件箱的SMTP服务器端口
 EMAIL_HOST_USER = '15110738723@163.com'    #发送邮件的邮箱地址
 EMAIL_HOST_PASSWORD = '1001luoxi'         #发送邮件的邮箱密码(这里使用的是授权码)
+EAMIL_FROM = "鱼书<15110738723@163.com>"
+
+
+# 秘钥字符串
+PRIVATE_KEY_PATH = os.path.join(BASE_DIR, 'alipay_key/private_key_2048.txt')
+PUBLIC_KEY_PATH = os.path.join(BASE_DIR, 'alipay_key/public_key_2048.txt')
+
+
+# 支付宝配置参数
+ALIPAY_APPID = "2016101100659474"
+ALIPAY_URL = "https://openapi.alipaydev.com/gateway.do"
+
+UPLOAD_PATH = '/static/upload/'
+ALLOWED_FILEEXTS = ['.png','.jpeg','.jpg','.gif','.bmp']

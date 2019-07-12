@@ -1,0 +1,114 @@
+{% extends 'admin/index.html' %}
+
+        {% block content %}
+            <div class="admin-biaogelist">
+            <div class="listbiaoti am-cf">
+                <ul class="am-icon-flag on"> 栏目名称</ul>
+                <dl class="am-icon-home" style="float: right;"> 当前位置： 首页 > <a
+                        href="{% url 'admin:admin_book' %}">书籍列表</a></dl>
+                <dl>
+                    <button type="button" class="am-btn am-btn-danger am-round am-btn-xs am-icon-plus"> 添加书籍</button>
+                </dl>
+            </div>
+            <div class="am-btn-toolbars am-btn-toolbar am-kg am-cf">
+                <ul>
+                    <li>
+                        <div class="am-btn-group am-btn-group-xs">
+                            <select data-am-selected="{btnWidth: 90, btnSize: 'sm', btnStyle: 'default'}">
+                                <option value="b">产品分类</option>
+                                <option value="o">下架</option>
+                            </select>
+                        </div>
+                    </li>
+                    <li style="margin-left: -4px;">
+                        <span class="tubiao am-icon-calendar"></span>
+                        <input type="text" class="am-form-field am-input-sm am-input-zm  am-icon-calendar"
+                               placeholder="开始日期" data-am-datepicker="{theme: 'success',}" readonly/>
+                    </li>
+                    <li><input type="text" class="am-form-field am-input-sm am-input-xm" placeholder="关键词搜索"/></li>
+                    <li>
+                        <button type="button" class="am-btn am-radius am-btn-xs am-btn-success"
+                                style="margin-top: -1px;">搜索
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            <form class="am-form am-g">
+                <table width="100%" class="am-table am-table-bordered am-table-radius am-table-striped">
+                    <thead>
+                    <tr class="am-success">
+                        <th class="table-check"><input type="checkbox"/></th>
+                        <th class="table-id">ID</th>
+                        <th class="table-id" style="width:150px">标题</th>
+                        <th class="table-title">作者</th>
+                        <th class="table-type">精装/平装</th>
+                        <th class="table-type">价格</th>
+                        <th class="table-date am-hide-sm-only">上传日期</th>
+                        <th width="163px" class="table-set">操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for res in data %}
+                        <tr>
+                            <td><input type="checkbox"/></td>
+                            <td>{{ res.id }}</td>
+                            <td>{{ res.bname }}</td>
+                            <td>{{ res.author }}</td>
+                            <td><a href="#">{{ res.jingz }}</a></td>
+                            <td>{{ res.price }}</td>
+                            <td class="am-hide-sm-only">{{ res.date }}</td>
+                            <td><a href="{% url 'admin:a_del' bid=res.id %}"><span title="放入回收站" class="am-icon-trash-o"></span> </a></td>
+
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+
+                {#        分页#}
+                <div class="row">
+                    <nav aria-label="Page navigation">
+                        <ul class="pagination">
+                            {% if pagination.has_previous %}
+                                <li>
+                                    <a href="{% url 'admin:admin_book' pagination.previous_page_number %}"
+                                       aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                            {% else %}
+                                <li class="disabled">
+                                    <a href="#" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                            {% endif %}
+                            {% for page in pagerange %}
+                                {% if page == pagination.number %}
+                                    <li class="active"><a href="{% url 'admin:admin_book' page %}">{{ page }}</a></li>
+                                {% else %}
+                                    <li><a href="{% url 'admin:admin_book' page %}">{{ page }}</a></li>
+                                {% endif %}
+                            {% endfor %}
+
+                            {% if pagination.has_next %}
+                                <li>
+                                    <a href="{% url 'admin:admin_book' pagination.next_page_number %}" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                            {% else %}
+                                <li class="disabled">
+                                    <a href="#" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                            {% endif %}
+                        </ul>
+                    </nav>
+
+                </div>
+                <hr/>
+                <p>注：.....</p>
+            </form>
+            </div>
+{% endblock %}

@@ -1,14 +1,15 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
-
-
-
 {% block css %}
 
 
+
+
+
+
     <link rel="stylesheet"
-          href="{% static 'css/bootstrap.min.css' %}">
-    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+          href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/base.css">
     <link rel="shortcut icon"
           href="/static/images/icon.png">
 
@@ -18,171 +19,179 @@
 {% endblock %}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 {% block content %}
+    {% load staticfiles %}
+    <div class='container'>
+        <div class="row" id="alert">
 
+            <div id="alert" class="alert alert-warning" role="alert">{{ msg }}</div>
 
-<div class='container'>
-    <div class="row">
-
-
-
-
-    </div>
-
-
-    <div class="row book-container my-detail-row" style="width: 100%">
-        <div class="col-md-2">
-            <img class="book-img" src="{{ a }}{{ content.image }}"/>
         </div>
-        <div class="col-md-5 flex-vertical detail-con">
-            <div>
-                <h4>{{ content.bname }}</h4>
-            </div>
-            <div class="description-font-margin">
-                <div>
-                    <span>作者:</span>
-                    <span>{{ content.author }}</span>
-                </div>
-                <div>
-                    <span>出版社:</span>
-                    <span>{{ content.publisher }}</span>
-                </div>
-                <div>
-                    <span>出版年：</span>
-                    <span>{{ content.pubdate }}</span>
-                </div>
-                <div>
-                    <span>页数：</span>
-                    <span>{{ content.pages }}</span>
-                </div>
-                <div>
-                    <span>定价：</span>
-                    <span>￥{{ content.price }}</span>
-                </div>
-                <div>
-                    <span>精装：</span>
-                    <span>{{ content.jingz }}</span>
-                </div>
-                <div>
-                    <span>ISBN：</span>
-                    <span id="isbn">{{ content.isbn }}</span>
-                </div>
 
-                    <div class="color-count">
-                        <span>5人想要 / </span>
-                        <span>4人可赠送</span>
+
+        <div class="row book-container my-detail-row" style="width: 100%">
+            <div class="col-md-2">
+                <img class="book-img" src="/static/upload/{{ content.image }}"/>
+            </div>
+            <div class="col-md-5 flex-vertical detail-con">
+                <div>
+                    <h4>{{ content.bname }}</h4>
+                </div>
+                <div class="description-font-margin">
+                    <div>
+                        <span>作者:</span>
+                        <span>{{ content.author }}</span>
+                    </div>
+                    <div>
+                        <span>出版社:</span>
+                        <span>{{ content.publisher }}</span>
+                    </div>
+                    <div>
+                        <span>出版年：</span>
+                        <span>{{ content.pubdate }}</span>
+                    </div>
+                    <div>
+                        <span>页数：</span>
+                        <span>{{ content.pages }}</span>
+                    </div>
+                    <div>
+                        <span>定价：</span>
+                        <span>￥{{ content.price }}</span>
+                    </div>
+                    <div>
+                        <span>精装：</span>
+                        <span>{{ content.jingz }}</span>
+                    </div>
+                    <div>
+                        <span>ISBN：</span>
+                        <span id="isbn">{{ content.isbn }}</span>
                     </div>
 
+                    <div class="color-count">
+                        <span>{{ wuser | length }}人想要 / </span>
+                        <span>{{ guser | length }}人可赠送</span>
+                    </div>
+
+                </div>
             </div>
         </div>
-    </div>
-    <div style="margin-top:30px; display: flex" class="row ">
-
-            <div class="col-md-3">
-                <span class="bg-info">已添加至心愿清单</span>
-            </div>
-
-    </div>
-    <div style="margin-top: 30px;" class="row">
-        <div class="col-md-2"><span class="description-title">内容简介</span></div>
-    </div>
-    <div style="margin-top:15px;" class="row">
-        <div class="col-md-11">
-            <p class="description-font">{{ content.intro }}</p>
+        <div style="margin-top:30px; display: flex" class="row ">
+            {% if not isgifts and not idwish %}
+                <div class="col-md-1">
+                <span class="zengsong">
+                <a class="btn btn-outline" href="#">
+                        赠送此书
+                </a></span>
+                </div>
+                <div style="margin-left:30px;" class="col-md-1">
+                    <a class="btn btn-outline" href="#">
+                        <span class="xinyuan">加入到心愿清单</span>
+                    </a>
+                </div>
+            {% elif idwish %}
+                <div class="col-md-3">
+                    <span class="bg-info">已添加至心愿清单</span>
+                </div>
+            {% else %}
+                <div class="col-md-3">
+                    <span class="bg-info">已添加至赠送清单</span>
+                </div>
+            {% endif %}
         </div>
-    </div>
-
-        <div style="margin-top:30px; display: flex" class="row">
-            <div class="col-md-3"><span class="description-title">向他们请求此书</span></div>
+        <div style="margin-top: 30px;" class="row">
+            <div class="col-md-2"><span class="description-title">内容简介</span></div>
         </div>
-        <hr style="margin-top:5px;"/>
-
-            <div style="margin-top:30px; display: flex" class="row">
-                <div class="col-md-1" style="width: 11em;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;">
-                    晓啸儿
-                </div>
-                <div class="col-md-2 description-font">
-                    上传于2019-06-17
-                </div>
-                <div class="col-md-2">
-                    <a class="btn-normal"
-                       href="/drift/783">向他请求此书</a>
-                </div>
+        <div style="margin-top:15px;" class="row">
+            <div class="col-md-11">
+                <p class="description-font">{{ content.intro }}</p>
             </div>
-
-            <div style="margin-top:30px; display: flex" class="row">
-                <div class="col-md-1" style="width: 11em;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;">
-                    fan1992619
-                </div>
-                <div class="col-md-2 description-font">
-                    上传于2019-06-18
-                </div>
-                <div class="col-md-2">
-                    <a class="btn-normal"
-                       href="/drift/784">向他请求此书</a>
-                </div>
-            </div>
-
-            <div style="margin-top:30px; display: flex" class="row">
-                <div class="col-md-1" style="width: 11em;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;">
-                    jiangzhf
-                </div>
-                <div class="col-md-2 description-font">
-                    上传于2019-06-23
-                </div>
-                <div class="col-md-2">
-                    <a class="btn-normal"
-                       href="/drift/792">向他请求此书</a>
-                </div>
-            </div>
-
-            <div style="margin-top:30px; display: flex" class="row">
-                <div class="col-md-1" style="width: 11em;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;">
-                    hehe
-                </div>
-                <div class="col-md-2 description-font">
-                    上传于2019-06-24
-                </div>
-                <div class="col-md-2">
-                    <a class="btn-normal"
-                       href="/drift/793">向他请求此书</a>
-                </div>
-            </div>
-
-
-
-    <div class="remodal" data-remodal-id="modal" role="dialog"
-         aria-labelledby="modal1Title" aria-describedby="modal1Desc"
-         data-remodal-options="closeOnOutsideClick: false">
-        <button data-remodal-action="close" class="remodal-close"
-                aria-label="Close"></button>
-        <div>
-            <h5 class="diag-title">
-                您确定拥有《遇见未知的自己》这本书吗？</h5>
-            <p id="modal1Desc" class="description-font">
-                如果您不想赠送此书，或者没有这本书，请不要随意发布虚假信息。谢谢你的支持和理解。
-            </p>
         </div>
-        <br>
-        <button data-remodal-action="confirm" class="remodal-confirm">确定赠送</button>
-        <button data-remodal-action="cancel" class="remodal-cancel">不，算了</button>
+
+        {% if  idwish.launched == 0 and  idwish %}
+            <div style="margin-top:30px;" class="row">
+                <div class="col-md-3"><span class="description-title">向他们请求此书</span></div>
+            </div>
+            <hr style="margin-top:5px;"/>
+            {% for gift in guser %}
+                <div style="margin-top:30px;" class="row">
+                    <div class="col-md-1">
+                        {{ gift.uid.name }}
+                    </div>
+                    <div class="col-md-2 description-font">
+                        上传于{{ gift.date |date:"Y-m-d" }}
+                    </div>
+                    {% if gift.launched == 0 %}
+                        <div class="col-md-2">
+                        <span class="qingqiu">
+                            <a class="btn-normal" href="{% url 'app:order' %}?id= {{ gift.id }}">
+                            向他请求此书</a>
+                        </span>
+                        </div>
+                    {% else %}
+                        <div class="col-md-2">
+                        <span >
+                            <a class="btn-normal" href="#">
+                            已向他请求此书</a>
+                        </span>
+                        </div>
+                    {% endif %}
+                </div>
+            {% endfor %}
+        {% endif %}
+        {% if isgifts.launched  == 0 and isgifts %}
+            <div style="margin-top:30px;" class="row">
+                <div class="col-md-3"><span class="description-title">向他们赠送此书</span></div>
+            </div>
+            <hr style="margin-top:5px;"/>
+            {% for wish in wuser %}
+                <div style="margin-top:30px;" class="row">
+                    <div class="col-md-1">
+                        {{ wish.uid }}
+                    </div>
+                    <div class="col-md-2 description-font">
+                        上传于{{ wish.date |date:"Y-m-d" }}
+                    </div>
+                    {% if wish.launched == 0 %}
+                        <div class="col-md-2">
+                        <span class="sendwish">
+                            <a class="btn-normal" href="{% url 'app:give' %}?id={{ wish.id }}" id="sendwish">
+                            向他赠送此书</a>
+                        </span>
+                        </div>
+                    {% elif wish.launched == 1 %}
+                        <div class="col-md-2">
+                        <span >
+                            <a class="btn-normal" href="#">
+                            已向他赠送此书</a>
+                        </span>
+                        </div>
+                    {% endif %}
+                </div>
+            {% endfor %}
+        {% endif %}
+
+        {#        <div class="remodal" data-remodal-id="modal" role="dialog"#}
+        {#             aria-labelledby="modal1Title" aria-describedby="modal1Desc"#}
+        {#             data-remodal-options="closeOnOutsideClick: false">#}
+        {#            <button data-remodal-action="close" class="remodal-close"#}
+        {#                    aria-label="Close"></button>#}
+        {#            <div>#}
+        {#                <h5 class="diag-title">#}
+        {#                    您确定拥有《{{ content.bname }}》这本书吗？</h5>#}
+        {#                <p id="modal1Desc" class="description-font">#}
+        {#                    如果您不想赠送此书，或者没有这本书，请不要随意发布虚假信息。谢谢你的支持和理解。#}
+        {#                </p>#}
+        {#            </div>#}
+        {#            <br>#}
+        {#            <button data-remodal-action="confirm" class="remodal-confirm">确定赠送</button>#}
+        {#            <button data-remodal-action="cancel" class="remodal-cancel">不，算了</button>#}
+        {#        </div>#}
+
     </div>
 {% endblock %}
-
-
 {% block jss %}
+
+
 
 
     <script src="/static/js/jquery-3.2.1.min.js"></script>
@@ -194,5 +203,57 @@
 
     <script src="/static/js/remodal.min.js"></script>
     <script src="/static/js/book-detail.js"></script>
+    <script>
+        $(function () {
+            {#$('.qingqiu').click(function () {#}
+            {##}
+            {#    alert("您确定拥有这本书吗？" +#}
+            {#        "如果您不想赠送此书，或者没有这本书，请不要随意发布虚假信息。谢谢你的支持和理解。")#}
+            {# });#}
+            {#//zengsong  {id: '{{ book.id }}#}
+            $('.zengsong').click(function () {
+                $.getJSON('{% url 'app:add_gifts' %}?id={{ content.id }}', function (data) {
+                    if (data.status == 2) {
+                        alert('您还未登录，登录才能操作哦！！！')
+                    } else if (data.status == 1) {
+                        alert('这本书以添加进您的赠送清单或已经存在于您的心愿清单，请不要重复添加')
+                    } else {
+                        alert('添加成功！');
+                        window.location.href = "{% url 'app:detail' %}?id={{ content.id }}"
+                    }
+                })
+            });
+
+            //xinyuan
+            $('.xinyuan').click(function () {
+                $.getJSON('{% url 'app:add_wish' %}', {id: '{{ content.id }}'}, function (data) {
+                    if (data.status == 2) {
+                        alert('您还未登录，登录才能操作哦！！！')
+                    } else if (data.status == 1) {
+                        alert('这本书以添加进您的赠送清单或已经存在于您的心愿清单，请不要重复添加')
+                    } else {
+                        alert('添加成功！');
+                        window.location.href = "{% url 'app:detail' %}?id={{ content.id }}"
+
+                    }
+                })
+            });
+
+            {#//sendwish 向他赠送此书#}
+            $('.sendwish').click(function () {
+                alert('已向他/她发送了一封邮件，如果他/她愿意接受你的赠送，你将收到一个鱼漂');
+            {#    $.getJSON('{% url 'app:give' %}', {id: '{{ wish.id }}'}, function (data) {#}
+            {#        odiv = document.getElementById('alert');#}
+            {#        odiv1 = document.getElementById('sendwish');#}
+            {#        odiv.innerText = '已向他/她发送了一封邮件，如果他/她愿意接受你的赠送，你将收到一个鱼漂';#}
+            {#        odiv.style.fontSize = '20px';#}
+            {#        odiv.style.color = 'red';#}
+            {#        odiv.style.background = '#E1E4E8';#}
+            {##}
+            {##}
+            {#     })#}
+             });
+        });
+    </script>
 
 {% endblock %}

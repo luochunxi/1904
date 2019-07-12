@@ -17,10 +17,12 @@ from django.contrib import admin
 from django.urls import path, include
 
 from User import views
-
+#
 urlpatterns = [
     # path('admin/', admin.site.urls),
-    path('', views.index),
+    path('', views.index,),
+
     path('app/', include('User.urls', namespace='app')),
-    path('captcha', include('captcha.urls')),
+    path('admin/', include('Admin.urls', namespace='admin')),
+    path('captcha', include('captcha.urls',)),
 ]

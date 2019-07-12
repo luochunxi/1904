@@ -1,0 +1,126 @@
+{% extends 'admin/index.html' %}
+<body>
+<div class="am-cf admin-main">
+    <div class="nav-navicon admin-main admin-sidebar">
+        <div class="sideMenu am-icon-dashboard" style="color:#aeb2b7; margin: 10px 0 0 0;"> 欢迎系统管理员：清风抚雪</div>
+        <!-- sideMenu End -->
+        {% block content %}
+            <div class=" admin-content">
+                <div class="daohang">
+                    <ul>
+                        <li>
+                            <button type="button" class="am-btn am-btn-default am-radius am-btn-xs"> 首页</button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="admin-biaogelist">
+                    <div class="fbneirong">
+                        <form class="am-form" enctype="multipart/form-data" action="{% url 'admin:add_book' %}" method="post">
+                            {% csrf_token %}
+                            <div class="am-form-group am-cf">
+                                <div class="zuo">书名：</div>
+                                <div class="you">
+                                    <input type="text" name="bname" class="am-input-sm" id="doc-ipt-email-1" placeholder="请输入书名">
+                                      {{ form.bname.errors }}
+                                </div>
+                            </div>
+                            <div class="am-form-group am-cf">
+                                <div class="zuo">作者：</div>
+                                <div class="you">
+                                    <input type="text" name="author"  class="am-input-sm" id="doc-ipt-pwd-1" placeholder="请输入作者">
+                                      {{ form.author.errors }}
+                                </div>
+                            </div>
+
+                            <div class="am-form-group am-cf">
+                                <div class="zuo">出版社：</div>
+                                <div class="you">
+                                    <input type="text" name="publisher" class="am-input-sm" id="doc-ipt-pwd-1" placeholder="请输入出版社">
+                                    {{ form.publisher.errors }}
+                                </div>
+                            </div>
+                            <div class="am-form-group am-cf">
+                                <div class="zuo">精装：</div>
+                                <div class="you">
+                                    <input type="text" name="jingz" class="am-input-sm" id="doc-ipt-pwd-1" placeholder="精装/平装">
+                                </div>
+                            </div>
+                            <div class="am-form-group am-cf">
+                                <div class="zuo">定价：</div>
+                                <div class="you">
+                                    <input type="text" name="price" class="am-input-sm" id="doc-ipt-pwd-1" placeholder="请输入定价">
+                                </div>
+                            </div>
+                            <div class="am-form-group am-cf">
+                                <div class="zuo">页数：</div>
+                                <div class="you">
+                                    <input type="text" name="pages" class="am-input-sm" id="doc-ipt-pwd-1" placeholder="请输入页数">
+                                    {{ form.pages.errors }}
+                                </div>
+                            </div>
+                            <div class="am-form-group am-cf">
+                                <div class="zuo">ISBN：</div>
+                                <div class="you">
+                                    <input type="text" name="isbn" class="am-input-sm" id="doc-ipt-pwd-1" placeholder="请输入ISBN">
+                                    {{ form.isbn.errors }}
+                                </div>
+                            </div>
+                            <div class="am-form-group am-cf">
+                                <div class="zuo">出版年：</div>
+                                <div class="you">
+                                    <input type="text" name="pubdate" class="am-input-sm" id="doc-ipt-pwd-1" placeholder="请输入出版年">
+                                </div>
+                            </div>
+{#                            <div class="am-form-group am-cf">#}
+{#                                <div class="zuo">上传日期：</div>#}
+{#                                <div class="you">#}
+{#                                    <input type="text" class="am-input-sm" id="doc-ipt-pwd-1" placeholder="请输入上传">#}
+{#                                </div>#}
+{#                            </div>#}
+{#                            <div class="am-form-group am-cf">#}
+{#                                <div class="zuo">是否放入回收站：</div>#}
+{#                                <div class="you">#}
+{#                                    <input type="text" class="am-input-sm" id="doc-ipt-pwd-1" placeholder="是否放入回收站">#}
+{#                                </div>#}
+{#                            </div>#}
+                            <div class="am-form-group am-cf">
+                                <div class="zuo">内容简介：</div>
+                                <div class="you">
+                                    <input type="text" name="intro" class="am-input-sm" id="doc-ipt-pwd-1" placeholder="请输入内容简介">
+                                    {{ form.intro.errors }}
+                                </div>
+                            </div>
+                            <div class="am-form-group am-cf">
+                                <div class="zuo">书籍图片：</div>
+                                <div class="you" style="height: 45px;">
+                                    <input type="file" id="doc-ipt-file-1" name="photo">
+                                    <p class="am-form-help" >请选择要上传的文件...</p>
+
+                                </div>
+                            </div>
+
+                            <div class="am-form-group am-cf">
+                                <div class="you" style="margin-left: 11%;">
+                                    <input type="submit" value="上传">
+                                    &nbsp;
+
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>
+{% endblock %}
+<!--[if lt IE 9]>
+<script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+<script src="/static/admin/js/polyfill/rem.min.js"></script>
+<script src="/static/admin/js/polyfill/respond.min.js"></script>
+<script src="/static/admin/js/amazeui.legacy.js"></script>
+<![endif]-->
+
+<!--[if (gte IE 9)|!(IE)]><!-->
+<script src="/static/admin/js/amazeui.min.js"></script>
+<!--<![endif]-->

@@ -1,6 +1,6 @@
-
 {% extends 'base.html' %}
 {% load staticfiles %}
+{% load static %}
 
 {% block css %}
 
@@ -28,13 +28,13 @@
             </div>
         </div>
         <div id="books" class="row">
-            {% for bb in book %}
+            {% for bb in pagination.object_list %}
 
                 <div class="col-sm-4 book-container">
-                    <a href="{% url 'app:detail' id=bb.id %}" class="link">
+                    <a href="{% url 'app:detail' %}?id={{ bb.id }}" class="link">
                         {#  < a href="{% url 'book:bookdetail' %}?id={{ book.id }}" class="link">#}
                         <div class="col-md-4 no-padding">
-                            <img class="book-img cssshadow" src="{{ a }}{{ bb.image }} ">
+                            <img class="book-img cssshadow" src="/static/upload/{{ bb.image }} ">
                         </div>
                         <div style="margin-left: 0;" class="col-md-8 flex-vertical book-info">
                             <span class="title">{{ bb.bname }}</span>
@@ -50,8 +50,50 @@
 
         </div>
 
+
+
+        <nav aria-label="Page navigation">
+              <ul class="pagination">
+                {% if pagination.has_previous %}
+                    <li>
+                      <a href="{% url 'app:index' %}?page={{ pagination.previous_page_number }}" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                      </a>
+                    </li>
+                 {% else %}
+                    <li class="disabled">
+                      <a href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                      </a>
+                    </li>
+                {% endif %}
+                  {% for page in number %}
+                      {% if page == pagination.number %}
+                        <li class="active"><a href="{% url 'app:index' %}?page={{ page }}">{{ page }}</a></li>
+                      {% else %}
+                          <li><a href="{% url 'app:index'%}?page={{ page }}">{{ page }}</a></li>
+                      {% endif %}
+                  {% endfor %}
+
+              {% if pagination.has_next  %}
+                <li>
+                  <a href="{% url 'app:index'%}?page={{  pagination.next_page_number  }}" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                  </a>
+                </li>
+              {% else %}
+                  <li class="disabled">
+                  <a href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                  </a>
+                </li>
+              {% endif %}
+              </ul>
+            </nav>
+
+
     </div>
-{% endblock  %}
+{% endblock %}
 
 <div id="footer" class="flex-hor-center">
     <span>© 2017-2020 yushu.im created by 七月</span>
@@ -60,11 +102,11 @@
 
 {% block jss %}
 
-<script src="/static/js/jquery-3.2.1.min.js"></script>
-<script src="/static/js/bootstrap.min.js"></script>
-<script src="/static/js/base.js"></script>
-<script>
-    $SCRIPT_ROOT = "";
-</script>
+    <script src="/static/js/jquery-3.2.1.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/js/base.js"></script>
+    <script>
+        $SCRIPT_ROOT = "";
+    </script>
 
 {% endblock jss %}

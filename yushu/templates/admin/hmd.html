@@ -1,0 +1,127 @@
+{% extends 'admin/index.html' %}
+{% block content %}
+    <body>
+    <div class="am-cf admin-main">
+
+    <div class=" admin-content">
+
+    <div class="admin-biaogelist">
+    <div class="listbiaoti am-cf">
+        <ul class="am-icon-users"> 用户管理</ul>
+        <dl class="am-icon-home" style="float: right;">当前位置： 首页 > <a href="{% url 'admin:add_book' %}">商品列表</a>
+        </dl>
+        <!--这里打开的是新页面-->
+    </div>
+    <form class="am-form am-g">
+        <table width="100%" class="am-table am-table-bordered am-table-radius am-table-striped">
+            <thead>
+            <tr class="am-success">
+                <th class="table-check"><input type="checkbox"/></th>
+                <th class="table-id">ID</th>
+                <th class="table-title">用户昵称</th>
+                <th class="table-author am-hide-sm-only">鱼豆</th>
+                <th class="table-author am-hide-sm-only">注册日期</th>
+                <th class="table-date am-hide-sm-only">赠送</th>
+                <th class="table-date am-hide-sm-only">心愿</th>
+                <th width="130px" class="table-set">操作</th>
+            </tr>
+            </thead>
+            <tbody>
+
+
+            {% for data in data %}
+                <tr>
+                    <td><input type="checkbox"/></td>
+                    <td>{{ data.id }}</td>
+                    <td><a href="#">{{ data.name }}</a></td>
+                    <td>{{ data.beans }}</td>
+                    <td class="am-hide-sm-only">{{ data.c_time }}</td>
+                    <td class="am-hide-sm-only">{{ data.send_counter }}</td>
+                    <td class="am-hide-sm-only">{{ data.receive_counter }}</td>
+
+                    <td>
+                        <div class="am-btn-toolbar">
+                            <div class="am-btn-group am-btn-group-xs">
+                                <a href="{% url 'admin:c_del'  %}?id={{ data.id }}">撤销</a>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+
+        {#        分页#}
+        <div class="row" >
+            <nav aria-label="Page navigation">
+                <ul class="pagination">
+                    {% if pagination.has_previous %}
+                        <li>
+                            <a href="{% url 'admin:admin_book' pagination.previous_page_number %}"
+                               aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                    {% else %}
+                        <li class="disabled">
+                            <a href="#" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                    {% endif %}
+                    {% for page in pagerange %}
+                        {% if page == pagination.number %}
+                            <li class="active"><a href="{% url 'admin:admin_book' page %}">{{ page }}</a></li>
+                        {% else %}
+                            <li><a href="{% url 'admin:admin_book' page %}">{{ page }}</a></li>
+                        {% endif %}
+                    {% endfor %}
+
+                    {% if pagination.has_next %}
+                        <li>
+                            <a href="{% url 'admin:admin_book' pagination.next_page_number %}" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    {% else %}
+                        <li class="disabled">
+                            <a href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    {% endif %}
+                </ul>
+            </nav>
+
+        </div>
+        <hr/>
+        <p>注：.....</p>
+    </form>
+{% endblock %}
+<div class="foods">
+    <ul>
+        版权所有@2015.
+    </ul>
+    <dl>
+        <a href="" title="返回头部" class="am-icon-btn am-icon-arrow-up"></a>
+    </dl>
+</div>
+</div>
+</div>
+</div>
+
+<!--[if lt IE 9]>
+<script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+<script src="/static/admin/js/polyfill/rem.min.js"></script>
+<script src="/static/admin/js/polyfill/respond.min.js"></script>
+<script src="/static/admin/js/amazeui.legacy.js"></script>
+<![endif]-->
+
+<!--[if (gte IE 9)|!(IE)]><!-->
+<script src="/static/admin/js/amazeui.min.js"></script>
+<!--<![endif]-->
+
+
+</body>
+</html>

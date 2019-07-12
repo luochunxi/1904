@@ -17,52 +17,40 @@
     <link rel="stylesheet" href="/static/css/search-result.css">
 
 {% endblock %}
-
-
-
-
-
-
-
-
-
-
 {% block content %}
 
 
-<div class='container'>
-    <div class="row">
+    <div class='container'>
+        <div class="row">
 
 
+        </div>
 
 
-    </div>
-
-
-    <div style="margin-top:20px;" class="row flex-vertical-center">
-        <div class="col-md-6">
+        <div style="margin-top:20px;" class="row flex-vertical-center">
+            <div class="col-md-6">
             <span class="sub-title">搜索 <span class="space highlight"
                                              id="keyword">{{ q }}</span>的结果</span>
-        </div>
-        <div class="col-md-3 col-md-offset-3">
+            </div>
+            <div class="col-md-3 col-md-offset-3">
             <span class="sub-title"> 共 <span class="space"
                                              id="total">{{ num }}</span> 条记录</span>
+            </div>
         </div>
-    </div>
-    <hr>
+        <hr>
 
 
 
-        {% for ss in soushuo %}
+        {% for ss in pagination.object_list %}
             <div class="row col-padding">
-                <a href="{% url 'app:detail' id=ss.id %}" class="">
+                <a href="{% url 'app:detail' %}?id={{ ss.id }}" class="">
                     <div class="col-md-2">
-                        <img class="book-img-small shadow" src="{{ a }}{{ ss.image }}">
+                        <img class="book-img-small shadow" src="/static/upload/{{ ss.image }}">
                     </div>
                     <div class="col-md-7 flex-vertical description-font">
                         <span class="title">{{ ss.bname }}</span>
 
-                        <span>{{ ss.author }} / {{ ss.publisher}} / ￥{{ ss.price }}</span>
+                        <span>{{ ss.author }} / {{ ss.publisher }} / ￥{{ ss.price }}</span>
                         <span class="summary">{{ ss.intro }}</span>
                     </div>
                 </a>
@@ -70,17 +58,36 @@
         {% endfor %}
 
 
-    <div class="row">
-        <div class="flex-hor-center">
-            <ul class="pagination" id="pagination"></ul>
+        <div class="row">
+            <div class="flex-hor-center">
+                <ul class="pagination" id="pagination">
+                    <li><a href="{% url 'app:search' %}?q={{ q }}&page=1">首页</a></li>
+                    {% if pagination.has_previous %}
+                        <li><a href="{% url 'app:search' %}?q={{ q }}&page={{ pagination.previous_page_number }}">&lt;前页</a></li>
+                    {% else %}
+                        <li class="page-item prev disabled"><a href="#">&lt;前页</a></li>
+                    {% endif %}
+                    {% for page in number %}
+                        {% if page == pagination.number %}
+                            <li class="active"><a href="{% url 'app:search' %}?q={{ q }}&page={{ page }}"
+                                                  class="page-link">{{ page }}</a></li>
+                        {% else %}
+                            <li><a href="{% url 'app:search' %}?q={{ q }}&page={{ page }}" class="page-link">{{ page }}</a></li>
+                        {% endif %}
+                    {% endfor %}
+                    {% if pagination.has_next %}
+                        <li><a href="{% url 'app:search' %}?q={{ q }}&page={{ pagination.next_page_number }}">后页&gt;</a></li>
+                    {% else %}
+                        <li class="page-item next disabled"><a href="#">后页&gt;</a></li>
+                    {% endif %}
+                    <li><a href="{% url 'app:search' %}?q={{ q }}&page={{ paginator.num_pages }}">尾页</a></li>
+                </ul>
+            </div>
         </div>
-    </div>
 
-</div>
+    </div>
 {% endblock %}
-<div id="footer" class="flex-hor-center">
-    <span>© 2017-2020 yushu.im created by 七月</span>
-</div>
+
 {% block jss %}
 
 
@@ -94,9 +101,9 @@
         $SCRIPT_ROOT = "";
     </script>
 
-    <script src="/static/js/jquery.twbsPagination.min.js"></script>
-    <script src="/static/js/util.js"></script>
-    <script src="/static/js/search_result.js"></script>
+    {#    <script src="/static/js/jquery.twbsPagination.min.js"></script>#}
+    {#    <script src="/static/js/util.js"></script>#}
+    {#    <script src="/static/js/search_result.js"></script>#}
 
 
 {% endblock %}

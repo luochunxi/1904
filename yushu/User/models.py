@@ -1,3 +1,4 @@
+from datetime import datetime
 from django.db import models
 
 
@@ -14,7 +15,12 @@ class User(models.Model):
     email = models.EmailField(unique=True)
     sex = models.CharField(max_length=32, choices=gender, default='男')
     c_time = models.DateTimeField(auto_now_add=True)
-
+    beans = models.FloatField(default=0, verbose_name='鱼豆')
+    send_counter = models.IntegerField(default=0, verbose_name='送出')
+    receive_counter = models.IntegerField(default=0, verbose_name='收到')
+    head_photo = models.CharField(max_length=5000,default='upload/head_photo/timg.gif', verbose_name='头像')
+    usertype = models.IntegerField(default=1)  # 类型
+    allowlogin = models.IntegerField(default=1) # 是否允许登录
     def __str__(self):
         return self.name
 
@@ -38,8 +44,10 @@ class Book(models.Model):
     intro = models.CharField(max_length=1000, verbose_name='内容简介')
     image = models.ImageField(upload_to='upload/%Y/%m', verbose_name='书籍图片')
     date = models.DateTimeField(auto_now=True, verbose_name='添加日期')
+
+    isdel = models.IntegerField() # 回收
     # 一对多关系
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='Book', db_column='uid', default=1)
+    uid = models.ForeignKey(User, on_delete=models.CASCADE, related_name='book_user', db_column='uid', default=8)
 
     def __str__(self):
         return self.bname
@@ -49,33 +57,51 @@ class Book(models.Model):
 
 
 # 赠送表
-class Presented(models.Model):
-    gifts = models.IntegerField(null=True, blank=True)  # 赠送
-    wish = models.IntegerField(null=True, blank=True)  # 心愿
+class Gifts(models.Model):
     # 一对多关系
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='Presented', db_column='uid', default=1)
+    uid = models.ForeignKey(User, on_delete=models.CASCADE, related_name='gifts_user', db_column='uid')
+    bookid = models.ForeignKey(Book, on_delete=models.CASCADE, related_name='gifts_book', db_column='bookid')
+    launched = models.IntegerField(default=0)
+    date = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return self.user
+        return self.uid
 
     class Meta:
-        db_table = 'presented'
+        db_table = 'gifts'
+
+
+# 心愿表
+class Wish(models.Model):
+    uid = models.ForeignKey(to=User, on_delete=models.CASCADE, related_name='wish_user', db_column='uid')
+    bookid = models.ForeignKey(to=Book, on_delete=models.CASCADE, related_name='wish_book', db_column='bookid')
+    # 是否已经赠送出去
+    launched = models.IntegerField(default=0, )
+    date = models.DateTimeField(auto_now=True, )
+
+    def __str__(self):
+        return self.uid
+
+    class Meta:
+        db_table = 'wish'
 
 
 # 交易表
 class Pending(models.Model):
-    dou = models.IntegerField(default=0)
-    # 一对多关系
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='Pending', db_column='uid', default=1)
+    # 请求者信息
+    uid = models.ForeignKey(User, on_delete=models.CASCADE, related_name='pending_user', db_column='uid',)
+    bookid = models.ForeignKey(Book, on_delete=models.CASCADE, related_name='pending_book', db_column='bookid')
+    tuid = models.CharField(max_length=20)        # 发送者id
+    tname = models.CharField(max_length=20)        # 发送者姓名
+    recipients = models.CharField(max_length=128)  # 收件名
+    phone = models.CharField(max_length=19) #电话
+    address = models.CharField(max_length=2000)   # 地址
+    message = models.CharField(max_length=2000,null=True,blank=True)   # 留言
+    times = models.DateTimeField(auto_now_add=True) # 时间
+    state = models.IntegerField(default=0)  # 状态
 
     def __str__(self):
-        return self.user
+        return self.recipients
 
     class Meta:
         db_table = 'pending'
-
-
-
-
-
-

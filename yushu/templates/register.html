@@ -5,13 +5,25 @@
 
 
 
-<link rel="stylesheet"
-      href="/static/css/bootstrap.min.css">
-<link rel="stylesheet" href="/static/css/base.css">
-<link rel="shortcut icon"
-      href="/static/images/icon.png">
+    <link rel="stylesheet"
+          href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/base.css">
+    <link rel="shortcut icon"
+          href="/static/images/icon.png">
 
-
+    <style>
+        .captcha{
+            width: 88.99px;
+        }
+        #id_captcha_1{
+            width: 179px;
+            height: 34px;
+        }
+        #id_sex{
+            width: 273px;
+            height: 34px;
+        }
+    </style>
 {% endblock %}
 
 
@@ -19,85 +31,84 @@
 {% block quanbu %}
 
 
-<div class='container'>
-    <div class="row">
+    <div class='container'>
+        <div class="row">
 
 
-    </div>
+        </div>
 
-    <div class="row white-bg-margin">
-        <div class="col-md-6 col-md-offset-3">
-            <div class="bg-container">
-                <div class="row">
-                    <div class="col-md-4 col-md-offset-4 text-center">
-                        <span class="big-title">鱼 书</span>
+        <div class="row white-bg-margin">
+            <div class="col-md-6 col-md-offset-3">
+                <div class="bg-container">
+                    <div class="row">
+                        <div class="col-md-4 col-md-offset-4 text-center">
+                            <span class="big-title">鱼 书</span>
+                        </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2 flex-vertical personal-detail">
-                        <form action="/app/register/" method="post">
-                            {#                            <input style="width:100%" id="nickname" name="nickname"#}
-                            {#                                   type="text"#}
-                            {#                                   placeholder="昵称"#}
-                            {#                                   class="none-input"#}
-                            {#                                   value="">#}
-                            {#                            <input style="width:100%" id="email" name="email" type="text"#}
-                            {#                                   placeholder="邮箱"#}
-                            {#                                   class="none-input"#}
-                            {#                                   value="">#}
-                            {#                            <input id="password" style="width:100%"#}
-                            {#                                   name="password"#}
-                            {#                                   placeholder="密码"#}
-                            {#                                   class="none-input" type="password">#}
-                            {% if message %}
-                                <div class="alert alert-warning">{{ message }}</div>
-                            {% endif %}
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2 flex-vertical personal-detail">
+                            <form action="/app/register/" method="post">
+                                {#                            <input style="width:100%" id="nickname" name="nickname"#}
+                                {#                                   type="text"#}
+                                {#                                   placeholder="昵称"#}
+                                {#                                   class="none-input"#}
+                                {#                                   value="">#}
+                                {#                            <input style="width:100%" id="email" name="email" type="text"#}
+                                {#                                   placeholder="邮箱"#}
+                                {#                                   class="none-input"#}
+                                {#                                   value="">#}
+                                {#                            <input id="password" style="width:100%"#}
+                                {#                                   name="password"#}
+                                {#                                   placeholder="密码"#}
+                                {#                                   class="none-input" type="password">#}
+                                {% if message %}
+                                    <div class="alert alert-warning">{{ message }}</div>
+                                {% endif %}
 
-                            {% csrf_token %}
+                                {% csrf_token %}
 
-                            <h2 class="text-center">欢迎注册</h2>
-                            <div class="form-group">
-                                {{ register_form.username.label_tag }}
-                                {{ register_form.username }}
-                            </div>
-                            <div class="form-group">
-                                {{ register_form.password1.label_tag }}
-                                {{ register_form.password1 }}
-                            </div>
-                            <div class="form-group">
-                                {{ register_form.password2.label_tag }}
-                                {{ register_form.password2 }}
-                            </div>
-                            <div class="form-group">
-                                {{ register_form.email.label_tag }}
-                                {{ register_form.email }}
-                            </div>
-                            <div class="form-group">
-                                {{ register_form.sex.label_tag }}
-                                {{ register_form.sex }}
-                            </div>
-                            <div class="form-group">
-                                {{ register_form.captcha.errors }}
-                                {{ register_form.captcha.label_tag }}
-                                {{ register_form.captcha }}
-                                <a href="{% url 'app:register' %}">看不清？</a>
-                            </div>
-                            <input style="margin-top:15px;" id="btn-submit" type="submit"
-                                   class="btn btn-big btn-block" value="注册">
-                        </form>
+                                <h2 class="text-center">欢迎注册</h2>
+                                <div class="form-group">
+                                    {{ register_form.username.label_tag }}
+                                    {{ register_form.username }}
+                                </div>
+                                <div class="form-group">
+                                    {{ register_form.password1.label_tag }}
+                                    {{ register_form.password1 }}
+                                </div>
+                                <div class="form-group">
+                                    {{ register_form.password2.label_tag }}
+                                    {{ register_form.password2 }}
+                                </div>
+                                <div class="form-group">
+                                    {{ register_form.email.label_tag }}
+                                    {{ register_form.email }}
+                                </div>
+                                <div class="form-group">
+                                    {{ register_form.sex.label_tag }} <br>
+                                    {{ register_form.sex }}
+                                </div>
+                                <div class="form-group">
+                                    {{ register_form.captcha.errors }}
+                                    {{ register_form.captcha.label_tag }} <br>
+                                    {{ register_form.captcha }}
+                                </div>
+                                <input style="margin-top:15px;" id="btn-submit" type="submit"
+                                       class="btn btn-big btn-block" value="注册">
+                            </form>
+                        </div>
                     </div>
-                </div>
-                <div style="margin-top:30px;" class="row">
-                    <div class="col-md-8 text-center col-md-offset-2">
-                        <span class="description-font">已有账号？</span><a
-                            href="/app/login">登录</a>
+                    <div style="margin-top:30px;" class="row">
+                        <div class="col-md-8 text-center col-md-offset-2">
+                            <span class="description-font">已有账号？</span><a
+                                href="/app/login">登录</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-</div>
+    </div>
 {% endblock %}
 <div id="footer" class="flex-hor-center">
     <span>© 2017-2020 yushu.im created by 七月</span>
@@ -107,12 +118,42 @@
 
 
 
-<script src="/static/js/jquery-3.2.1.min.js"></script>
-<script src="/static/js/bootstrap.min.js"></script>
-<script src="/static/js/base.js"></script>
-<script>
-    $SCRIPT_ROOT = "";
-</script>
+    <script src="/static/js/jquery-3.2.1.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/js/base.js"></script>
+    <script>
+        $SCRIPT_ROOT = "";
+
+         $(function () {
+            $('.captcha').css({
+                'cursor': 'pointer'
+            })
+            //# ajax 刷新
+            $('.captcha').click(function () {
+                console.log('click');
+                $.getJSON("/captcha/refresh/",
+                    function (result) {
+                        $('.captcha').attr('src', result['image_url']);
+                        $('#id_captcha_0').val(result['key'])
+                    });
+            });
+            //# ajax动态验证
+            $('#id_captcha_1').blur(function () {
+                // #id_captcha_1为输入框的id，当该输入框失去焦点是触发函数
+                json_data = {
+                    'response': $('#id_captcha_1').val(),  // 获取输入框和隐藏字段id_captcha_0的数值
+                    'hashkey': $('#id_captcha_0').val()
+                };
+                $.getJSON('/ajax_val', json_data, function (data) { //ajax发送            $('#captcha_status').remove()
+                    if (data['status']) { //status返回1为验证码正确， status返回0为验证码错误， 在输入框的后面写入提示信息
+                        $('#id_captcha_1').after('<span id="captcha_status" >*验证码正确</span>')
+                    } else {
+                        $('#id_captcha_1').after('<span id="captcha_status" >*验证码错误</span>')
+                    }
+                });
+            });
+        })
+    </script>
 
 
 {% endblock %}

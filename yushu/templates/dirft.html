@@ -1,24 +1,24 @@
 
-<!DOCTYPE HTML>
-<html>
+{% extends 'base.html' %}
 
+    {% block css %}
 
-    <title>鱼书</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
 
 
     <link rel="stylesheet"
-          href="/static/3rd/ui/bootstrap.min.css">
+          href="/static/css/bootstrap.min.css">
     <link rel="stylesheet" href="/static/css/base.css">
     <link rel="shortcut icon"
           href="/static/images/icon.png">
 
     <link rel="stylesheet" href="/static/css/drift.css">
+{% endblock %}
+
+{% block quanbu %}
 
 
-<body>
 
 
 <div class='container'>
@@ -26,7 +26,7 @@
 
 
 
-
+        <div id="alert" class="alert alert-warning" role="alert">{{ msg }}</div>
     </div>
 
     <div style="margin-top:100px;" class="row">
@@ -40,27 +40,28 @@
                 <div class="row">
                     <div class="col-md-12 text-center bg-head">
                         <span class="drift-title">向<span
-                                class="space">leo5592368</span>请求这本书</span>
+                                class="space">{{ gifts.uid.name }}</span>请求这本书</span>
                     </div>
                 </div>
                 <div style="margin-top:15px;" class="row">
                     <div class="col-md-10 col-md-offset-1 flex-vertical gifter-container">
                         <span class="sub-title-color">以下是书籍拥有者信息，诚信度供你参考:</span>
-                        <span style="margin-top:10px; margin-bottom:10px;">leo5592368</span>
+                        <span style="margin-top:10px; margin-bottom:10px;font-size: 20px;color: #5e5e5e">{{ gifts.uid.name }}</span>
                         <div><span
-                                class="description-font">鱼豆：</span><span>0.5</span>
+                                class="description-font">鱼豆：</span><span>{{ gifts.uid.beans }}</span>
                         </div>
                         <div><span
-                                class="description-font">接受/送出书籍：</span><span>0/0</span>
+                                class="description-font">接受/送出书籍：</span><span>{{ gifts.uid.receive_counter }}/{{ gifts.uid.send_counter }}</span>
                         </div>
                     </div>
                 </div>
                 <div style="margin-top:10px;" class="row">
                     <div class="col-md-10 col-md-offset-1">
-                        <span class="main-color">本次交易将消耗你1个鱼豆，你当前还有1.0个鱼豆</span>
+                        <span class="main-color">本次交易将消耗你1个鱼豆，你当前还有{{ user.beans }}个鱼豆</span>
                     </div>
                 </div>
-                <form action="" method="post">
+                <form action="{% url 'app:order' %}?id={{ id }}" method="post">
+                    {% csrf_token %}
                     <div style="margin-top:20px;" class="row">
                         <div class="col-md-10 col-md-offset-1 flex-vertical input-margin">
                             <label class="sub-title-color" for="recipient_name">收件人姓名</label>
@@ -95,9 +96,9 @@
                         <div style="position: relative;left:-20px;"
                              class="col-md-5 col-md-offset-4 flex-vertical text-center">
                             <input style="margin-top:12px;" type="submit"
-                                   class="btn btn-big btn-block" value="提交">
+                                   class="btn btn-big btn-block" value="生成订单" >
                         <span style="margin-top:15px;"
-                              class="main-color">提交信息，等待leo5592368将书籍邮寄给你</span>
+                              class="main-color">提交信息，等待<span style="font-size: 20px;color: #5e5e5e">{{ gifts.uid.name }}</span>将书籍邮寄给你</span>
                         </div>
                     </div>
                 </form>
@@ -106,14 +107,12 @@
     </div>
 
 </div>
-<div id="footer" class="flex-hor-center">
-    <span>© 2017-2020 yushu.im created by 七月</span>
-</div>
-</body>
+{% endblock %}
+{% block jss %}
 
 
-    <script src="/static/3rd/jquery-3.2.1.min.js"></script>
+
+    <script src="/static/js/jquery-3.2.1.min.js"></script>
     <script src="/static/js/drift.js"></script>
 
-
-</html>
+{% endblock %}
