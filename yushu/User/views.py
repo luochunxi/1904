@@ -61,6 +61,7 @@ def detail(request):
     bid = request.GET.get('id')
     content = Book.objects.get(pk=bid)
     uid = request.session.get('user_id')
+    user = User.objects.filter(pk=uid).first()
     isgifts = Gifts.objects.filter(bookid_id=bid, uid_id=uid).first()
     idwish = Wish.objects.filter(bookid_id=bid, uid_id=uid).first()
     wuser = Wish.objects.filter(bookid_id=bid)
@@ -138,6 +139,7 @@ def add_gifts(request):
 # 赠送清单
 def gifts_list(request):
     uid = request.session.get('user_id')
+    user = User.objects.filter(pk=uid).first()
     lists = Gifts.objects.filter(uid_id=uid)
     book = Wish.objects.all()
     a = []
@@ -174,6 +176,7 @@ def add_wish(request):
 # 心愿清单
 def wish_list(request):
     uid = request.session.get('user_id')
+    user = User.objects.filter(pk=uid).first()
     lists = Wish.objects.filter(uid_id=uid)
     book = Gifts.objects.all()
     a = []
@@ -206,6 +209,7 @@ def repeal(request):
 # 订单
 def order(request):
     uid = request.session.get('user_id')
+    user = User.objects.filter(pk=uid).first()
     id = request.GET.get('id')
     user = User.objects.filter(pk=uid).first()
     gifts = Gifts.objects.filter(pk=id).first()
@@ -250,6 +254,7 @@ def order(request):
 # 鱼漂
 def pending_list(request):
     uid = request.session.get('user_id')
+    user = User.objects.filter(pk=uid).first()
     pending = Pending.objects.filter(uid=uid).order_by('-times')
     return render(request, 'pending.html', locals())
 
@@ -530,7 +535,7 @@ def pay(request):
         out_trade_no=str(int(time.time())) + str(randint(1000, 9999)),  # 商户订单号
         total_amount=str(pending.bookid.id),  # 将Decimal类型转换为字符串交给支付宝
         subject=pending.bookid.bname,
-        return_url='http://127.0.0.1:8000/app/pending_list/',
+        return_url='http://10.0.113.134:8080/app/pending_list/',
         notify_url=None  # 可选, 不填则使用默认notify url
     )
 

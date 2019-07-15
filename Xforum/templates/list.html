@@ -1,0 +1,134 @@
+
+{% extends 'index.html' %}
+{% block yangshi %}
+     <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='index/css/style.css') }}"/>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='index/css/list.css') }}"/>
+{% endblock %}
+{% block index %}
+
+    <div id="wp" class="wp">
+        <div id="pt" class="bm cl">
+            <div class="z">
+                <a href="{{ url_for('bbs.index') }}" class="nvhm" title="内核源码 - 10分钟学院">内核源码 - 10分钟学院</a><em>&raquo;</em>
+                <a href="{{ url_for('bbs.index') }}">论坛</a><em>&raquo;</em><a href="{{ url_for('bbs.index_1',id=dbk.0.cid) }}">{{ dbk.0.classname }}</a><em>&raquo;</em><a
+                    href="{{ url_for('bbs.list',id = idxbk.0.cid) }}">{{ idxbk.0.classname }}</a>
+            </div>
+        </div>
+        <div class="boardnav">
+            <div id="ct" class="wp cl" style="margin-left:145px">
+                <div id="sd_bdl" class="bdl" style="width:130px;margin-left:-145px">
+                    <div class="tbn" id="forumleftside"><h2 class="bdl_h">版块导航</h2>
+                        {% for dd in dbk %}
+
+                            <dl class="a" id="lf_1">
+                                {% if dd.parentid == 0 %}
+
+                                    <dt><a href="javascript:;" title="{{ dd.classname }}">{{ dd.classname }}</a></dt>
+                                    {% for xb in xbk %}
+                                        {% if dd.cid == xb.classpath %}
+                                            <dd class="bdl_a">
+                                                <a href="{{ url_for('bbs.list',id= xb.cid ) }}" title="{{ xb.classname }}">{{ xb.classname }}</a>
+                                            </dd>
+
+                                        {% endif %}
+                                    {% endfor %}
+                                {% endif %}
+                            </dl>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <div class="mn">
+
+                    <div class="bm bml pbn">
+                        <div class="bm_h cl">
+                            <h1 class="xs2">
+                                <a href="{{ url_for('bbs.list',id = idxbk[0].cid) }}">{{ idxbk[0].classname }}</a>
+                                <span class="xs1 xw0 i">今日: <strong class="xi1">0</strong><span
+                                        class="pipe">|</span>主题: <strong class="xi1">{{ tzs }}</strong></span></h1>
+                        </div>
+                        <div class="bm_c cl pbn">
+
+                            <div>
+                                版主: <span class="xi2">{{ user.username }}</span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div id="pgt" class="bm bw0 pgs cl">
+                        <span class="pgb y"><a href="{{ url_for('bbs.index') }}">返&nbsp;回</a></span>
+
+
+                        <a href="{{ url_for('bbs.fatie',id =id)}}" id="newtz" title="发新帖"><img src="../static/index/images/pn_post.png"
+                                                                                      alt="发新帖"/></a></div>
+
+                    <div id="threadlist" class="tl bm bmw">
+                        <div class="th">
+                            <table cellspacing="0" cellpadding="0">
+                                <tr>
+                                    <th colspan="2">
+                                        <div class="tf">
+                                            筛选:
+                                            <a href="list.php?classid=5" class="xi2">全部</a><span class="pipe">|</span><a
+                                                href="list.php?classid=5&elite=1" class="xi2">精华</a></div>
+                                    </th>
+                                    <td class="by">作者</td>
+                                    <td class="num">回复/查看</td>
+                                    <td class="by">最后发表</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="bm_c">
+                            <form method="post" autocomplete="off" name="moderate" id="moderate" action="">
+                                <table summary="forum_2" id="forum_2" cellspacing="0" cellpadding="0">
+                                    {% for tt in tz %}
+                                        <tr>
+                                            <td class="icn">
+                                                <a href="{{ url_for('bbs.detail',id=tt.tid) }}" title="新窗口打开" target="_blank"><img
+                                                        src="../static/index/images/folder_common.gif"/></a>
+                                            </td>
+                                            <th class="common">
+                                                <a href="{{ url_for('bbs.detail',id=tt.tid) }}" class="xst" style="color:red">{{ tt.title }}</a>
+                                                <img src="../static/index/images/digest_1.gif" align="absmiddle" alt="digest"
+                                                     title="精华帖"/>
+                                            </th>
+                                            <td class="by">
+                                                <cite></cite>
+                                                <em><span class="xi1">{{ tt.addtime }}</span></em>
+                                            </td>
+                                            <td class="num"><a href="" class="xi2">{{ tt.rate }}</a><em>{{ tt.hits }}</em></td>
+                                            <td class="by">
+                                                <cite>admin</cite><em><span title="2019-06-10 19:35:46">1天前</span></em></td>
+                                        </tr>
+                                    {% endfor %}
+                                </table>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="bm bw0 pgs cl">
+                        <span class="pgb y"><a href="{{ url_for('bbs.index') }}">返&nbsp;回</a></span>
+
+                        <a href="{{ url_for('bbs.fatie' ,id=id)}}" id="newtz" title="发新帖"><img src="../static/index/images/pn_post.png"
+                                                                                         alt="发新帖"/></a></div>
+                    <div style="width:800px; margin:0 auto; padding:10px 0px; text-align:right">
+                        &nbsp;&nbsp;<input type="text"
+                                           onkeydown="javascript:if(event.keyCode==13){var page=(this.value>2)?2:this.value;location='/list.php?classid=5&page='+page+''}"
+                                           value="1" style="width:25px"><input type="button" value="GO"
+                                                                               onclick="javascript:var page=(this.previousSibling.value>2)?2:this.previousSibling.value;location='/list.php?classid=5&page='+page+''">&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;<a
+                            href=''>下一页</a>&nbsp;&nbsp;&nbsp;&nbsp;<a
+                            href=''>尾 页</a>&nbsp;&nbsp;&nbsp;&nbsp;共有<b>13</b>条记录&nbsp;&nbsp;&nbsp;&nbsp;每页显示<b>10</b>条，本页<b>1-10</b>条&nbsp;&nbsp;&nbsp;&nbsp;<b>1/2</b>页&nbsp;&nbsp;
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        {#newtz = document.getElementById('newtz')#}
+        {#newtz.onclick = function () {#}
+        {#    if session:#}
+        {##}
+        {# }#}
+    </script>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'index.html'%}
+{% block index %}
+    <div id="wp" class="wp">
+	<div id="ct" class="wp cl w">
+		<div class="nfl">
+			<div class="f_c altw">
+				<div id="messagetext" class="alert_right">
+				<p><font color=red><b>{{ msg }}</b></font>请稍候…… <br />
+				<script type="text/javascript" reload="1">setTimeout("location.href='http://127.0.0.1:5000/{{ ht }}';", 2000);</script></p>
+{#				<p class="alert_btnleft"><a href="">如果你的浏览器没有自动跳转，请点击此链接</a></p>#}
+				</div>
+			</div>
+		</div>
+	</div>
+    </div>
+{% endblock %}

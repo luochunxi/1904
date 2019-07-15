@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../static/admin/cloud/jquery.min.js"></script>
+    <style>
+        .a {
+            width: 200px;
+            height: 30px;
+            background: red;
+            margin-top: 3px;
+        }
+
+        .b {
+            font-size: 20px;
+        }
+
+    </style>
+</head>
+<body>
+<div id="x">
+    <ul id="xixi">
+        <li class="a"><a href=" {{ url_for('bbs.home',homeid = 1) }} ">修改头像</a></li>
+        <li><a href="{{ url_for('bbs.home',homeid = 2) }}">个人资料</a></li>
+        <li><a href="{{ url_for('bbs.home',homeid = 3) }}">个人签名</a></li>
+        <li><a href="">密码安全</a></li>
+    </ul>
+</div>
+<div id="x1">
+    <ul id="xixi">
+        <li class="a"><a href=" {{ url_for('bbs.home',homeid = 1) }} ">修改头像</a></li>
+        <li><a href="{{ url_for('bbs.home',homeid = 2) }}">个人资料</a></li>
+        <li><a href="{{ url_for('bbs.home',homeid = 3) }}">个人签名</a></li>
+        <li><a href="">密码安全</a></li>
+    </ul>
+
+</div>
+<div id="x2">
+    <ul id="xixi">
+        <li class="a"><a href=" {{ url_for('bbs.home',homeid = 1) }} ">修改头像</a></li>
+        <li><a href="{{ url_for('bbs.home',homeid = 2) }}">个人资料</a></li>
+        <li><a href="{{ url_for('bbs.home',homeid = 3) }}">个人签名</a></li>
+        <li><a href="">密码安全</a></li>
+    </ul>
+
+</div>
+<div id="x3">
+    <ul id="xixi">
+        <li class="a"><a href=" {{ url_for('bbs.home',homeid = 1) }} ">修改头像</a></li>
+        <li><a href="{{ url_for('bbs.home',homeid = 2) }}">个人资料</a></li>
+        <li><a href="{{ url_for('bbs.home',homeid = 3) }}">个人签名</a></li>
+        <li><a href="">密码安全</a></li>
+    </ul>
+</div>
+
+
+</body>
+</html>
+<script>
+    $("#xixi li").click(function () {
+        $(this).addClass('a').siblings().removeClass('a');
+    })
+    $("a").click(function (ev) {
+        ev.preventDefault()
+
+    })
+
+
+</script>
